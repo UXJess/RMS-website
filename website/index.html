@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocky Mountain Solutions – CSO Oversight & First Aid | Maple Ridge, BC</title>
+  <meta name="description" content="Professional Construction Safety Officer oversight and advanced first aid for high-stakes construction. WorkSafeBC compliant. Serving Maple Ridge, Tri-Cities, and Fraser Valley." />
+  <link rel="canonical" href="https://rockymountainsolutions.ca/" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rms-dark':       '#1A1C1E',
+            'rms-bg':         '#FCF8F8',
+            'rms-copper':     '#E86C2D',
+            'rms-text':       '#3C3E40',
+            'rms-copper-dark':'#C45520',
+          },
+          fontFamily: {
+            sans: ['Sherika', '"Public Sans"', 'system-ui', 'sans-serif'],
+            serif:['"Public Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Roboto Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Sherika';
+      src: url('fonts/Sherika-Bold copy.otf') format('opentype');
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #FCF8F8; color: #1A1C1E; font-family: 'Public Sans', system-ui, sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* ── CONTAINER ── */
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 0 2.15rem; }
+
+    /* ── NAV ── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      transition: background 0.35s, border-color 0.35s, backdrop-filter 0.35s;
+    }
+    #nav.scrolled {
+      background: rgba(13, 14, 15, 0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      backdrop-filter: blur(14px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 118px; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-link {
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #E86C2D; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.65rem 1.35rem; border-radius: 3px;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: background 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-copper { background: #E86C2D; color: #fff; }
+    .btn-copper:hover { background: #C45520; }
+    .btn-dark { background: #1A1C1E; color: #FCF8F8; }
+    .btn-dark:hover { background: #2a2e32; }
+    .btn-outline-light {
+      background: transparent; color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.32);
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.05); }
+    .btn-outline-dark {
+      background: transparent; color: #1A1C1E;
+      border: 1.5px solid rgba(26,28,30,0.3);
+    }
+    .btn-outline-dark:hover { border-color: #1A1C1E; }
+    .btn-lg { font-size: 1rem; padding: 1.1rem 2.25rem; }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      font-family: 'Roboto Mono', 'Courier New', monospace;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+
+    /* ── DISPLAY T1 ── */
+    .t1 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.551rem, 6.195vw, 5.830rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+
+    /* ── SECTION H2 ── */
+    .h2 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.25rem, 4vw, 4rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    /* ── H3 ── */
+    .h3 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 900; line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── DIVIDER RULE ── */
+    .rule { width: 48px; height: 3px; background: #E86C2D; }
+
+    /* ── HERO ── */
+    .hero {
+      height: 100vh; min-height: 640px;
+      background: #0d0e0f;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(232,108,45,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,108,45,0.035) 1px, transparent 1px);
+      background-size: 90px 90px;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 45%, rgba(232,108,45,0.09) 0%, transparent 70%);
+    }
+    .hero-content { position: relative; z-index: 10; max-width: 780px; padding: 0 2rem 0 4rem; text-align: left; margin-top: 10vh; }
+    .hero-logo-bg {
+      position: absolute; right: 2%; top: 50%;
+      transform: translateY(-50%);
+      z-index: 1; opacity: 0.14; pointer-events: none;
+    }
+
+    /* scroll cue */
+    .scroll-cue {
+      position: absolute; bottom: 2.75rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      z-index: 10; opacity: 0.5;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ── TICKER ── */
+    .ticker-outer { overflow: hidden; }
+    .ticker-track {
+      display: flex; gap: 3rem; width: max-content;
+      animation: scroll-ticker 28s linear infinite;
+    }
+    @keyframes scroll-ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      display: flex; align-items: center; gap: 10px;
+      white-space: nowrap;
+      font-family: 'Roboto Mono', 'Courier New', monospace;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: #E86C2D; flex-shrink: 0; }
+
+    /* ── SERVICE CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 460px);
+    }
+    .svc-card {
+      position: relative; overflow: hidden; cursor: pointer;
+    }
+    .svc-card-bg {
+      position: absolute; inset: 0; z-index: 0;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: brightness(68%);
+    }
+    .svc-card:hover .svc-card-bg { transform: scale(1.03); }
+    .svc-card-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(to right,  rgba(17,23,28,0.95) 0%, rgba(17,23,28,0.85) 25%, rgba(17,23,28,0.65) 50%, rgba(17,23,28,0.40) 70%, rgba(17,23,28,0.15) 100%),
+        linear-gradient(to bottom, rgba(17,23,28,0.65) 0%, rgba(17,23,28,0.40) 40%, rgba(17,23,28,0.10) 70%);
+      transition: background 0.4s;
+    }
+    .svc-card:hover .svc-card-overlay {
+      background:
+        linear-gradient(to right,  rgba(17,23,28,0.90) 0%, rgba(17,23,28,0.78) 25%, rgba(17,23,28,0.55) 50%, rgba(17,23,28,0.30) 70%, rgba(17,23,28,0.10) 100%),
+        linear-gradient(to bottom, rgba(17,23,28,0.55) 0%, rgba(17,23,28,0.30) 40%, rgba(17,23,28,0.05) 70%);
+    }
+    .svc-card-content {
+      position: relative; z-index: 2; height: 100%;
+      display: flex; flex-direction: column;
+      justify-content: space-between; padding: 2.25rem;
+    }
+    .card-num { color: rgba(232,108,45,0.75); }
+    .card-arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      border: 1px solid rgba(255,255,255,0.28); border-radius: 50%;
+      transition: background 0.25s, border-color 0.25s;
+      flex-shrink: 0;
+    }
+    .svc-card:hover .card-arrow { background: #E86C2D; border-color: #E86C2D; }
+    .card-cta-row { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; }
+
+    /* ── PHOTO PLACEHOLDERS ── */
+    .photo {
+      background-color: #1A1C1E;
+      background-image: linear-gradient(145deg, #22262a 0%, #1a1c1e 100%);
+      position: relative; overflow: hidden;
+    }
+    .photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    /* ── STATS ── */
+    .stat-num {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900; line-height: 1;
+      letter-spacing: -0.025em;
+    }
+
+    /* ── PROCESS ── */
+    .proc-num {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(4rem, 6vw, 6rem);
+      font-weight: 900; line-height: 1;
+      color: rgba(26,28,30,0.07);
+      letter-spacing: -0.04em;
+      position: absolute; top: -0.5rem; left: 0;
+    }
+
+    /* ── COVERAGE LIST ── */
+    .cov-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.75rem 0 1.75rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+    }
+    .cov-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+    /* ── FORM ── */
+    .field-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #595B5D; display: block; margin-bottom: 0.45rem;
+    }
+    .field-input {
+      width: 100%;
+      background: #fff;
+      border: 1px solid rgba(26,28,30,0.13); border-radius: 3px;
+      padding: 0.85rem 1rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.9rem; color: #1A1C1E;
+      outline: none; transition: border-color 0.2s; appearance: none;
+    }
+    .field-input:focus { border-color: #E86C2D; }
+    .field-input::placeholder { color: #aaa; }
+
+    /* ── FOOTER NAV ── */
+    .foot-link {
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.82rem; color: rgba(252,248,248,0.45);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .foot-link:hover { color: rgba(252,248,248,0.8); }
+
+    /* ── COVERAGE MAP (image background + node overlay) ── */
+    #coverage-map .coverage-map-overlay { pointer-events: none; }
+
+    /* Service city nodes: dim by default, bright when active */
+    .service-city { transition: opacity 0.35s ease; opacity: 0.55; }
+    .service-city.active { opacity: 1; }
+
+    /* Context cities: always dim, never highlighted */
+    .map-context { opacity: 0.45; }
+
+    .cov-row[data-region] { cursor: pointer; transition: background 0.2s ease, box-shadow 0.2s ease; }
+    .cov-row[data-region]:hover { background: rgba(232,108,45,0.06); }
+    .cov-row[data-region].active { background: rgba(232,108,45,0.09); box-shadow: inset 3px 0 0 rgba(232,108,45,0.5); }
+    .cov-row[data-region].active:hover { background: rgba(232,108,45,0.1); }
+
+    @keyframes map-pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50%       { opacity: 0.75; transform: scale(1.6); }
+    }
+    .city-pulse { animation: map-pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .cards-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 380px); }
+      .split-2 { grid-template-columns: 1fr !important; }
+      .stats-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      .proc-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      .footer-cols { grid-template-columns: 1fr 1fr !important; gap: 2.5rem !important; }
+      #mob-cta { display: block !important; }
+    }
+    @media (max-width: 600px) {
+      .stats-4 { grid-template-columns: 1fr !important; }
+      .proc-4  { grid-template-columns: 1fr !important; }
+      .footer-cols { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════ -->
+  <header id="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="/" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="../brand_assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:86px;width:auto;" />
+        </a>
+        <nav class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about"    class="nav-link">About</a>
+          <a href="#coverage" class="nav-link">Coverage</a>
+          <a href="#contact"  class="nav-link">Contact</a>
+          <a href="tel:+16045550100" class="btn btn-copper">Call Now</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+
+    <!-- Offset logo watermark -->
+    <div class="hero-logo-bg" aria-hidden="true">
+      <img src="../brand_assets/logo-rms1024.png" alt=""
+           style="width:min(58vw,640px);filter:grayscale(1) brightness(2);" />
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="eyebrow" style="color:rgba(232,108,45,0.85);margin-bottom:1.5rem;">
+        Construction Safety Officer &amp; Advanced First Aid
+      </div>
+
+      <h1 class="t1" style="color:#FCF8F8;">
+        Managing Your Risk.<br /><span style="color:#E86C2D;">Leading Your Safety.</span>
+      </h1>
+
+      <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(252,248,248,0.6);line-height:1.65;max-width:460px;">
+        Professional CSO oversight &amp; advanced first aid for high-stakes construction across the Lower Mainland.
+      </p>
+
+      <div style="display:flex;align-items:center;justify-content:flex-start;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
+        <a href="tel:+16045550100" class="btn btn-copper">Call for Coverage</a>
+        <a href="#services"        class="btn btn-outline-light">View Services</a>
+      </div>
+
+      <div class="eyebrow" style="color:rgba(252,248,248,0.3);margin-top:2.25rem;">
+        WorkSafeBC Compliant &nbsp;·&nbsp; COR® Support &nbsp;·&nbsp; Maple Ridge, BC
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-cue">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.35);font-size:8px;">Scroll</div>
+      <svg width="18" height="28" viewBox="0 0 18 28" fill="none">
+        <rect x="6" y="0.5" width="6" height="11" rx="3" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+        <circle cx="9" cy="5" r="1.8" fill="#E86C2D" opacity="0.8"/>
+        <path d="M4 19l5 6 5-6" stroke="rgba(255,255,255,0.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       TRUST TICKER
+  ═══════════════════════════════════════ -->
+  <div style="background:#3C3E40;border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="ticker-outer" style="padding:11px 0;">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot"></span>WorkSafeBC Compliant</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>COR® Support</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Advanced First Aid — OFA Level 3</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Maple Ridge · Tri-Cities · Fraser Valley</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Incident Response</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Site Safety Plans</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Hazard Assessment</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item"><span class="ticker-dot"></span>WorkSafeBC Compliant</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>COR® Support</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Advanced First Aid — OFA Level 3</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Maple Ridge · Tri-Cities · Fraser Valley</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Incident Response</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Site Safety Plans</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Hazard Assessment</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       SERVICES — ICAM card grid
+  ═══════════════════════════════════════ -->
+  <section id="services" style="background:#FCF8F8;padding:6rem 0 0;">
+    <div class="wrap">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.25rem;flex-wrap:wrap;gap:1.5rem;">
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">What We Do</div>
+          <h2 class="h2" style="color:#1A1C1E;max-width:520px;">
+            Complete Safety Solutions,<br />Built for the Field.
+          </h2>
+        </div>
+        <a href="#contact" class="btn btn-copper btn-lg">Request Coverage</a>
+      </div>
+    </div>
+
+    <!-- Full-bleed 2×2 card grid -->
+    <div class="cards-grid">
+
+      <!-- 01 · Safety Compliance -->
+      <div class="svc-card">
+        <div class="svc-card-bg" style="background-image:url('../brand_assets/safety_complience_and_oversight.png');background-size:cover;background-position:center;"></div>
+        <div class="svc-card-overlay"></div>
+        <div class="svc-card-content">
+          <div class="eyebrow card-num">01</div>
+          <div>
+            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
+              Safety Compliance<br />&amp; Oversight
+            </h3>
+            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
+              Inspections, hazard assessments, site safety plans, and WorkSafeBC audit support. Proactive control before problems become incidents.
+            </p>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 · Training — copper top bar variant -->
+      <div class="svc-card">
+        <div class="svc-card-bg" style="background-image:url('../brand_assets/training_and_engagement.png');background-size:cover;background-position:center;"></div>
+        <div class="svc-card-overlay"></div>
+        <!-- copper accent bar -->
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#E86C2D;z-index:3;"></div>
+        <div class="svc-card-content">
+          <div class="eyebrow card-num">02</div>
+          <div>
+            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
+              Training &amp;<br />Engagement
+            </h3>
+            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
+              Site-specific orientations, toolbox talks, and safety culture development. Field-level training that sticks with your crew.
+            </p>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 · Incident Response — warm dark bg -->
+      <div class="svc-card">
+        <div class="svc-card-bg" style="background-image:url('../brand_assets/incident_response_and_first_aid.png');background-size:cover;background-position:center;"></div>
+        <div class="svc-card-overlay"></div>
+        <div class="svc-card-content">
+          <div class="eyebrow card-num">03</div>
+          <div>
+            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
+              Incident Response<br />&amp; First Aid
+            </h3>
+            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
+              Advanced first aid, OFA Level 3 care, and EMS coordination. When it matters most — we're already on the floor.
+            </p>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 · Documentation -->
+      <div class="svc-card">
+        <div class="svc-card-bg" style="background-image:url('../brand_assets/documentation%20%26%20reporting.png');background-size:cover;background-position:center;"></div>
+        <div class="svc-card-overlay"></div>
+        <div class="svc-card-content">
+          <div class="eyebrow card-num">04</div>
+          <div>
+            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
+              Documentation<br />&amp; Reporting
+            </h3>
+            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
+              Accident investigation, COR® compliance records, and a complete paper trail. Every inspection, every incident — documented.
+            </p>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       VALUE PROP — Split
+  ═══════════════════════════════════════ -->
+  <section id="about" style="background:#FCF8F8;padding:8rem 0;">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
+
+        <!-- Text -->
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.9rem;">Why Rocky Mountain Solutions</div>
+          <div class="rule" style="margin-bottom:2rem;"></div>
+          <h2 class="h2" style="color:#1A1C1E;margin-bottom:2rem;">
+            Safety Is Not a<br />Requirement to Meet.<br />
+            <span style="color:#E86C2D;">It's a Responsibility<br />to Lead.</span>
+          </h2>
+          <p style="font-size:1.05rem;line-height:1.75;color:#3C3E40;margin-bottom:1.5rem;">
+            Rocky Mountain Solutions provides embedded Construction Safety Officer services and OFA Level 3 first aid coverage for high-stakes job sites across the Lower Mainland. We don't sit in trailers — we work the floor.
+          </p>
+          <p style="font-size:0.95rem;line-height:1.75;color:#595B5D;margin-bottom:2.75rem;">
+            Our approach is straightforward: know the site, know the hazards, and maintain the systems that keep workers going home safe. From WorkSafeBC compliance to COR® audit support — every day, every shift, zero compromises.
+          </p>
+          <a href="tel:+16045550100" class="btn btn-copper btn-lg">Book a Site Assessment</a>
+        </div>
+
+        <!-- Photo -->
+        <div class="photo" style="height:540px;border-radius:3px;overflow:hidden;"><img src="../brand_assets/RMS-mountain.png" alt="Rocky Mountain Solutions Construction Safety Officer — WorkSafeBC compliant field operations, Maple Ridge BC" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       STATS BAND
+  ═══════════════════════════════════════ -->
+  <section style="background:#1A1C1E;padding:5.5rem 0;border-top:1px solid rgba(255,255,255,0.05);">
+    <div class="wrap">
+      <div class="stats-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+
+        <div style="padding:2rem 2rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
+          <div class="stat-num" style="color:#E86C2D;">100%</div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">WorkSafeBC Compliant</div>
+        </div>
+
+        <div style="padding:2rem;border-right:1px solid rgba(255,255,255,0.08);">
+          <div class="stat-num" style="color:#FCF8F8;">OFA <span style="font-size:0.55em;">Lvl 3</span></div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">First Aid Certified</div>
+        </div>
+
+        <div style="padding:2rem;border-right:1px solid rgba(255,255,255,0.08);">
+          <div class="stat-num" style="color:#FCF8F8;">COR®</div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">Audit-Ready Support</div>
+        </div>
+
+        <div style="padding:2rem 0 2rem 2rem;">
+          <div class="stat-num" style="color:#FCF8F8;">3</div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">Regions Covered</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       PROCESS
+  ═══════════════════════════════════════ -->
+  <section style="background:#FCF8F8;padding:8rem 0;">
+    <div class="wrap">
+
+      <div style="margin-bottom:4.5rem;">
+        <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">How It Works</div>
+        <h2 class="h2" style="color:#1A1C1E;max-width:560px;">
+          From First Call to<br />Site Coverage — Fast.
+        </h2>
+      </div>
+
+      <div class="proc-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:4rem;">
+
+        <div style="position:relative;padding-top:4.5rem;">
+          <div class="proc-num">01</div>
+          <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Reach Out</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Call or submit a coverage request. We respond fast — because your site doesn't wait.</p>
+        </div>
+
+        <div style="position:relative;padding-top:4.5rem;">
+          <div class="proc-num">02</div>
+          <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Site Assessment</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">We review your scope, hazard profile, and WorkSafeBC requirements to plan the right coverage.</p>
+        </div>
+
+        <div style="position:relative;padding-top:4.5rem;">
+          <div class="proc-num">03</div>
+          <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Deployed On-Site</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Your CSO and first aid coverage is in place — working the site, not sitting in an office.</p>
+        </div>
+
+        <div style="position:relative;padding-top:4.5rem;">
+          <div class="proc-num">04</div>
+          <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Documented &amp; Reported</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Full records for every inspection, incident, and audit. Your paper trail is always current.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       COVERAGE AREAS
+  ═══════════════════════════════════════ -->
+  <section id="coverage" style="background:#1A1C1E;padding:8rem 0;">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
+
+        <!-- Left -->
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Where We Work</div>
+          <h2 class="h2" style="color:#FCF8F8;margin-bottom:2rem;">
+            Serving Greater<br />Vancouver &amp;<br />Fraser Valley.
+          </h2>
+          <p style="font-size:0.975rem;line-height:1.75;color:rgba(252,248,248,0.55);margin-bottom:2.75rem;max-width:420px;">
+            Based in Maple Ridge, we provide rapid deployment across the Lower Mainland. One call covers your site from Langley to Burnaby.
+          </p>
+
+          <!-- Coverage list -->
+          <div style="padding-left:6px;">
+            <div class="cov-row" data-region="maple-ridge">
+              <div>
+                <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#FCF8F8;margin-bottom:0.25rem;">Maple Ridge</div>
+                <div class="eyebrow" style="color:#E86C2D;font-size:8px;">Pitt Meadows · Primary Base</div>
+              </div>
+            </div>
+            <div class="cov-row" data-region="tri-cities">
+              <div>
+                <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#FCF8F8;margin-bottom:0.25rem;">Tri-Cities</div>
+                <div class="eyebrow" style="color:rgba(232,108,45,0.65);font-size:8px;">Coquitlam · Port Coquitlam</div>
+              </div>
+            </div>
+            <div class="cov-row" data-region="fraser-valley">
+              <div>
+                <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#FCF8F8;margin-bottom:0.25rem;">Fraser Valley</div>
+                <div class="eyebrow" style="color:rgba(232,108,45,0.65);font-size:8px;">Mission · Langley</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Where We Work map: fixed image background + interactive node overlay -->
+        <div id="coverage-map" style="height:500px;border-radius:3px;border:1px solid rgba(255,255,255,0.07);overflow:hidden;position:relative;">
+          <img src="../brand_assets/coverage-list-map.png" alt="WorkSafeBC service coverage map — Maple Ridge First Aid and CSO coverage across Lower Mainland and Fraser Valley" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
+          <!-- SVG viewBox matches image natural dimensions (1461×1388) so pixel coords align directly -->
+          <!-- Each group is translated to the exact dot position; pin tip points to that anchor -->
+          <!-- Pin is drawn from 24×24 coords: scale(4) translate(-12 -22) puts tip at (0,0)    -->
+          <!-- stroke-width = 1.5 ÷ scale so it renders as 1.5px in parent space               -->
+          <svg class="coverage-map-overlay" viewBox="0 0 1461 1388" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;">
+            <defs>
+              <filter id="node-glow" x="-150%" y="-150%" width="400%" height="400%">
+                <feGaussianBlur stdDeviation="7" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="node-glow-lg" x="-150%" y="-150%" width="400%" height="400%">
+                <feGaussianBlur stdDeviation="12" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Context cities: always dim, never highlighted -->
+            <g class="map-context">
+              <circle cx="115" cy="730" r="7" fill="rgba(255,255,255,0.55)"/>
+            </g>
+
+            <!-- ── TRI-CITIES ── -->
+            <!-- COQUITLAM anchor: (430, 423) -->
+            <g class="service-city" data-region="tri-cities" transform="translate(430 423)">
+              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="30" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
+              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">COQUITLAM</text>
+            </g>
+
+            <!-- PORT COQUITLAM anchor: (455, 570) -->
+            <g class="service-city" data-region="tri-cities" transform="translate(455 570)">
+              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
+              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PORT COQUITLAM</text>
+            </g>
+
+            <!-- ── MAPLE RIDGE REGION ── -->
+            <!-- PITT MEADOWS anchor: (805, 607) -->
+            <g class="service-city" data-region="maple-ridge" transform="translate(805 607)">
+              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
+              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PITT MEADOWS</text>
+            </g>
+
+            <!-- MAPLE RIDGE anchor: (980, 700) — primary, scale 5 + larger glow -->
+            <g class="service-city" data-region="maple-ridge" transform="translate(980 700)">
+              <g transform="scale(5) translate(-12 -22)" filter="url(#node-glow-lg)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.3" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.3"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="38" fill="none" stroke="#E86C2D" stroke-width="2"/>
+              <text x="0" y="65" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MAPLE RIDGE</text>
+            </g>
+
+            <!-- ── FRASER VALLEY ── -->
+            <!-- MISSION anchor: (1382, 710) -->
+            <g class="service-city" data-region="fraser-valley" transform="translate(1382 710)">
+              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
+              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MISSION</text>
+            </g>
+
+            <!-- LANGLEY anchor: (728, 1070) -->
+            <g class="service-city" data-region="fraser-valley" transform="translate(728 1070)">
+              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
+              </g>
+              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
+              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">LANGLEY</text>
+            </g>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CTA BAND — Copper
+  ═══════════════════════════════════════ -->
+  <section style="background:#E86C2D;padding:6rem 2.15rem;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      <div class="eyebrow" style="color:rgba(26,28,30,0.55);margin-bottom:1rem;">Every Site. Every Shift.</div>
+      <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.5rem;">Zero Compromises.</h2>
+      <p style="font-size:1.05rem;line-height:1.65;color:rgba(26,28,30,0.7);margin-bottom:2.75rem;">
+        Ready to put a certified CSO and first aid professional on your site? Let's talk coverage.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+16045550100" class="btn btn-dark btn-lg">Call Now</a>
+        <a href="#contact" class="btn btn-outline-dark btn-lg">Send a Request</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" style="background:#1A1C1E;padding:8rem 0;">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1.15fr;gap:6rem;align-items:start;">
+
+        <!-- Info -->
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Coverage Requests</div>
+          <h2 class="h2" style="color:#FCF8F8;margin-bottom:2rem;">
+            Need a CSO<br />on Your Site?
+          </h2>
+          <p style="font-size:0.975rem;line-height:1.75;color:rgba(252,248,248,0.55);margin-bottom:3rem;max-width:360px;">
+            One shift or an ongoing contract — reach out and we'll scope the right coverage for your project.
+          </p>
+
+          <!-- Contact rows -->
+          <a href="tel:+16045550100" style="text-decoration:none;" class="cov-row">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Phone</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#FCF8F8;">(604) 555-0100</div>
+            </div>
+            <div class="card-arrow" style="width:36px;height:36px;">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </a>
+          <a href="mailto:info@rockymountainsolutions.ca" style="text-decoration:none;" class="cov-row">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Email</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">info@rockymountainsolutions.ca</div>
+            </div>
+            <div class="card-arrow" style="width:36px;height:36px;">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </a>
+          <div class="cov-row" style="cursor:default;">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Based In</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">Maple Ridge, BC</div>
+            </div>
+          </div>
+
+          <!-- Trust marks -->
+          <div style="margin-top:2.25rem;display:flex;flex-direction:column;gap:0.45rem;">
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> WorkSafeBC Compliant Services
+            </div>
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> COR® Audit Support Available
+            </div>
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> OFA Level 3 Certified
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form style="background:#FCF8F8;border-radius:3px;padding:2.75rem;" onsubmit="rmsFormSubmit(this);return false;">
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:1.75rem;">Request Coverage</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <label class="field-label">First Name</label>
+              <input type="text" placeholder="First name" required class="field-input" />
+            </div>
+            <div>
+              <label class="field-label">Last Name</label>
+              <input type="text" placeholder="Last name" required class="field-input" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Company</label>
+            <input type="text" placeholder="Your company name" class="field-input" />
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <label class="field-label">Phone</label>
+              <input type="tel" placeholder="(604) 000-0000" class="field-input" />
+            </div>
+            <div>
+              <label class="field-label">Email</label>
+              <input type="email" placeholder="you@company.com" required class="field-input" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Service Needed</label>
+            <select required class="field-input">
+              <option value="" disabled selected>Select a service</option>
+              <option>Safety Compliance &amp; Oversight</option>
+              <option>Training &amp; Engagement</option>
+              <option>Incident Response &amp; First Aid</option>
+              <option>Documentation &amp; Reporting</option>
+              <option>Full CSO Coverage</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Site Location</label>
+            <input type="text" placeholder="City / Project address" class="field-input" />
+          </div>
+
+          <div style="margin-bottom:1.75rem;">
+            <label class="field-label">Message</label>
+            <textarea rows="4" placeholder="Project scope, start date, duration..." class="field-input" style="resize:none;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-copper" style="width:100%;justify-content:center;font-size:0.88rem;padding:1.1rem;">
+            Request Site Deployment
+          </button>
+          <!-- Success state — shown after submit -->
+          <div class="form-success" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1rem;text-align:center;gap:1.25rem;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#E86C2D;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.5;letter-spacing:-0.01em;max-width:280px;">Request Received. A Safety Professional will contact you within 4 business hours.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer style="background:#0d0e0f;border-top:1px solid rgba(255,255,255,0.05);padding:5.5rem 0 2.75rem;">
+    <div class="wrap">
+
+      <div class="footer-cols" style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4.5rem;">
+
+        <!-- Brand col -->
+        <div>
+          <img src="../brand_assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:148px;width:auto;margin-bottom:1.25rem;" />
+          <p style="font-size:0.82rem;line-height:1.75;color:rgba(252,248,248,0.38);margin-bottom:1.75rem;max-width:280px;">
+            Professional CSO oversight and advanced first aid for high-stakes construction. WorkSafeBC compliant. Serving the Lower Mainland.
+          </p>
+          <a href="tel:+16045550100" class="btn btn-copper" style="font-size:0.75rem;padding:0.65rem 1.25rem;">Call Now</a>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
+          <nav style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="#services" class="foot-link">Safety Compliance</a>
+            <a href="#services" class="foot-link">Training &amp; Engagement</a>
+            <a href="#services" class="foot-link">Incident Response</a>
+            <a href="#services" class="foot-link">Documentation</a>
+          </nav>
+        </div>
+
+        <!-- Coverage -->
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Coverage Areas</div>
+          <nav style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="#coverage" class="foot-link">Maple Ridge</a>
+            <a href="#coverage" class="foot-link">Tri-Cities</a>
+            <a href="#coverage" class="foot-link">Fraser Valley</a>
+            <a href="#coverage" class="foot-link">Lower Mainland</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="tel:+16045550100" class="foot-link">(604) 555-0100</a>
+            <a href="mailto:info@rockymountainsolutions.ca" class="foot-link" style="word-break:break-all;">info@rockymountainsolutions.ca</a>
+            <span class="foot-link" style="cursor:default;">Maple Ridge, BC</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div class="eyebrow" style="color:rgba(252,248,248,0.2);font-size:8px;">
+          &copy; 2025 Rocky Mountain Solutions &nbsp;·&nbsp; Maple Ridge, BC &nbsp;·&nbsp; WorkSafeBC Compliant
+        </div>
+        <div class="eyebrow" style="color:rgba(252,248,248,0.2);font-size:8px;">
+          Every Site. Every Shift. Zero Compromise.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Mobile sticky CTA -->
+  <div id="mob-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;">
+    <a href="tel:+16045550100" class="btn btn-copper" style="display:block;text-align:center;border-radius:0;padding:1.1rem;font-size:0.85rem;letter-spacing:0.12em;width:100%;">
+      CALL FOR COVERAGE — TAP TO DIAL
+    </a>
+  </div>
+
+
+  <script>
+    // Coverage map: left list hover toggles node highlight; default Maple Ridge
+    document.addEventListener('DOMContentLoaded', () => {
+      const DEFAULT_REGION = 'maple-ridge';
+      const rows   = document.querySelectorAll('.cov-row[data-region]');
+      const cities = document.querySelectorAll('.service-city');
+
+      function activate(region) {
+        cities.forEach(c => c.classList.toggle('active', c.dataset.region === region));
+        rows.forEach(row => row.classList.toggle('active', row.dataset.region === region));
+      }
+      function setToDefault() {
+        activate(DEFAULT_REGION);
+      }
+
+      rows.forEach(row => {
+        row.addEventListener('mouseenter', () => activate(row.dataset.region));
+        row.addEventListener('mouseleave', setToDefault);
+      });
+
+      activate(DEFAULT_REGION);
+    });
+  </script>
+
+  <script>
+    // Nav scroll state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // Mobile CTA + nav
+    function onResize() {
+      const mob = window.innerWidth < 900;
+      document.getElementById('mob-cta').style.display = mob ? 'block' : 'none';
+    }
+    onResize();
+    window.addEventListener('resize', onResize, { passive: true });
+
+    // Form success state
+    function rmsFormSubmit(form) {
+      Array.from(form.children).forEach(el => {
+        if (!el.classList.contains('form-success')) el.style.display = 'none';
+      });
+      form.querySelector('.form-success').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>

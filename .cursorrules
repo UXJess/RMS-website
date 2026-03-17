@@ -1,0 +1,45 @@
+# CLAUDE.md — Frontend Website Rules
+
+## Reference Images
+- If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
+- If no reference image: design from scratch with high craft (see guardrails below).
+
+## Local Server
+- **Always serve on localhost** — open `http://localhost:3000` in the browser to preview.
+- Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
+- `serve.mjs` lives in the project root. Start it in the background.
+- If the server is already running, do not start a second instance.
+
+## Output Defaults
+- Single `index.html` file, all styles inline, unless user says otherwise
+- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
+- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
+- Mobile-first responsive
+
+## Brand Assets
+- Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
+- If assets exist there, use them. Do not use placeholders where real assets are available.
+- If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+
+## RMS Brand (canonical source)
+- **Always refer to** `brand_assets/Rocky_Mountain_Solutions–Brand_Guidelines.md` for authoritative brand tokens, typography, colors, tone, and layout rules.
+- Quick reference from the branding file:
+  - **Typography:** Aeonik (headings, nav), Lora (body, pull quotes), Roboto Mono (data, specs)
+  - **Colors:** Primary base #FCF8F8; Secondary base #1A1C1E; Tertiary/accent #E86C2D
+  - **Tone:** Professional, clear, direct, confident. Avoid buzzwords and generic stock imagery.
+  - **Photography:** Authentic construction, workers in PPE, real job sites. No generic corporate stock.
+
+## Anti-Generic Guardrails
+- **Colors:** Never use default Tailwind palette. Use tokens from the branding file.
+- **Typography:** Never use the same font for headings and body. Follow the typography scale (T1, H1, H2, H3, Body) and line heights from the branding file.
+- **Shadows:** Avoid flat `shadow-md`. Prefer layered, color-tinted shadows with low opacity.
+- **Spacing:** Use the REM spacing token system (space-xs through space-5xl) from the branding file. Follow container padding and width rules.
+- **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
+- **Interactive states:** Every clickable element needs hover, focus-visible, and active states.
+- **Layout:** Large typography hierarchy, strong margins, grid-based layouts, generous white space.
+
+## Hard Rules
+- Do not add sections, features, or content not in the reference
+- Do not "improve" a reference design — match it
+- Do not use `transition-all`
+- Do not use default Tailwind blue/indigo as primary color
