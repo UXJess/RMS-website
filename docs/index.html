@@ -71,9 +71,9 @@
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
-      font-size: 0.8rem; font-weight: 700;
+      font-size: 0.8rem; font-weight: 700; line-height: 1;
       letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.65rem 1.35rem; border-radius: 3px;
+      padding: 0.65rem 1.35rem 0.55rem; border-radius: 3px;
       text-decoration: none; cursor: pointer; border: none;
       transition: background 0.2s, border-color 0.2s;
       white-space: nowrap;
@@ -92,7 +92,7 @@
       border: 1.5px solid rgba(26,28,30,0.3);
     }
     .btn-outline-dark:hover { border-color: #1A1C1E; }
-    .btn-lg { font-size: 1rem; padding: 1.1rem 2.25rem; }
+    .btn-lg { font-size: 1rem; padding: 1.1rem 2.25rem 1rem; }
 
     /* ── EYEBROW ── */
     .eyebrow {
@@ -714,9 +714,8 @@
         <div id="coverage-map" style="height:500px;border-radius:3px;border:1px solid rgba(255,255,255,0.07);overflow:hidden;position:relative;">
           <img src="assets/coverage-list-map.png" alt="WorkSafeBC service coverage map — Maple Ridge First Aid and CSO coverage across Lower Mainland and Fraser Valley" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
           <!-- SVG viewBox matches image natural dimensions (1461×1388) so pixel coords align directly -->
-          <!-- Each group is translated to the exact dot position; pin tip points to that anchor -->
-          <!-- Pin is drawn from 24×24 coords: scale(4) translate(-12 -22) puts tip at (0,0)    -->
-          <!-- stroke-width = 1.5 ÷ scale so it renders as 1.5px in parent space               -->
+          <!-- Each group is translated to the exact anchor (cx,cy); pin tip points down to that anchor -->
+          <!-- Pin style cloned from about.html <!-- Pin overlay -->: nested svg fill="none", stroke-width="1.5", eyebrow text -->
           <svg class="coverage-map-overlay" viewBox="0 0 1461 1388" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;">
 
             <!-- Context cities: always dim, never highlighted -->
@@ -727,58 +726,58 @@
             <!-- ── TRI-CITIES ── -->
             <!-- COQUITLAM anchor: (430, 423) -->
             <g class="service-city" data-region="tri-cities" transform="translate(430 423)">
-              <g transform="scale(4) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
-              </g>
-              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">COQUITLAM</text>
+              <svg x="-28" y="-56" width="56" height="56" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="20" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="20" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">COQUITLAM</text>
             </g>
 
             <!-- PORT COQUITLAM anchor: (455, 570) -->
             <g class="service-city" data-region="tri-cities" transform="translate(455 570)">
-              <g transform="scale(4) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
-              </g>
-              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PORT COQUITLAM</text>
+              <svg x="-28" y="-56" width="56" height="56" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="20" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="20" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">PORT COQUITLAM</text>
             </g>
 
             <!-- ── MAPLE RIDGE REGION ── -->
             <!-- PITT MEADOWS anchor: (805, 607) -->
             <g class="service-city" data-region="maple-ridge" transform="translate(805 607)">
-              <g transform="scale(4) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
-              </g>
-              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PITT MEADOWS</text>
+              <svg x="-28" y="-56" width="56" height="56" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="20" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="20" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">PITT MEADOWS</text>
             </g>
 
             <!-- MAPLE RIDGE anchor: (980, 700) — primary -->
             <g class="service-city" data-region="maple-ridge" transform="translate(980 700)">
-              <g transform="scale(5) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.3" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.3"/>
-              </g>
-              <text x="0" y="65" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MAPLE RIDGE</text>
+              <svg x="-32" y="-64" width="64" height="64" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="26" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="24" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">MAPLE RIDGE</text>
             </g>
 
             <!-- ── FRASER VALLEY ── -->
             <!-- MISSION anchor: (1382, 710) -->
             <g class="service-city" data-region="fraser-valley" transform="translate(1382 710)">
-              <g transform="scale(4) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
-              </g>
-              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MISSION</text>
+              <svg x="-28" y="-56" width="56" height="56" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="20" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="20" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">MISSION</text>
             </g>
 
             <!-- LANGLEY anchor: (728, 1070) -->
             <g class="service-city" data-region="fraser-valley" transform="translate(728 1070)">
-              <g transform="scale(4) translate(-12 -22)">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
-                <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
-              </g>
-              <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">LANGLEY</text>
+              <svg x="-28" y="-56" width="56" height="56" viewBox="0 0 24 24" fill="none" overflow="visible">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="#E86C2D" stroke-width="1.5"/>
+              </svg>
+              <text x="0" y="20" text-anchor="middle" font-family="'Roboto Mono','Courier New',monospace" font-size="20" font-weight="700" fill="rgba(252,248,248,0.85)" letter-spacing="0.15em">LANGLEY</text>
             </g>
           </svg>
         </div>
