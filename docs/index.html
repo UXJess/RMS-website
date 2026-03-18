@@ -718,16 +718,6 @@
           <!-- Pin is drawn from 24×24 coords: scale(4) translate(-12 -22) puts tip at (0,0)    -->
           <!-- stroke-width = 1.5 ÷ scale so it renders as 1.5px in parent space               -->
           <svg class="coverage-map-overlay" viewBox="0 0 1461 1388" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;">
-            <defs>
-              <filter id="node-glow" x="-150%" y="-150%" width="400%" height="400%">
-                <feGaussianBlur stdDeviation="7" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-              <filter id="node-glow-lg" x="-150%" y="-150%" width="400%" height="400%">
-                <feGaussianBlur stdDeviation="12" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
 
             <!-- Context cities: always dim, never highlighted -->
             <g class="map-context">
@@ -737,63 +727,57 @@
             <!-- ── TRI-CITIES ── -->
             <!-- COQUITLAM anchor: (430, 423) -->
             <g class="service-city" data-region="tri-cities" transform="translate(430 423)">
-              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+              <g transform="scale(4) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="30" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
               <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">COQUITLAM</text>
             </g>
 
             <!-- PORT COQUITLAM anchor: (455, 570) -->
             <g class="service-city" data-region="tri-cities" transform="translate(455 570)">
-              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+              <g transform="scale(4) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
               <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PORT COQUITLAM</text>
             </g>
 
             <!-- ── MAPLE RIDGE REGION ── -->
             <!-- PITT MEADOWS anchor: (805, 607) -->
             <g class="service-city" data-region="maple-ridge" transform="translate(805 607)">
-              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+              <g transform="scale(4) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
               <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">PITT MEADOWS</text>
             </g>
 
-            <!-- MAPLE RIDGE anchor: (980, 700) — primary, scale 5 + larger glow -->
+            <!-- MAPLE RIDGE anchor: (980, 700) — primary -->
             <g class="service-city" data-region="maple-ridge" transform="translate(980 700)">
-              <g transform="scale(5) translate(-12 -22)" filter="url(#node-glow-lg)">
+              <g transform="scale(5) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.3" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.3"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="38" fill="none" stroke="#E86C2D" stroke-width="2"/>
               <text x="0" y="65" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MAPLE RIDGE</text>
             </g>
 
             <!-- ── FRASER VALLEY ── -->
             <!-- MISSION anchor: (1382, 710) -->
             <g class="service-city" data-region="fraser-valley" transform="translate(1382 710)">
-              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+              <g transform="scale(4) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
               <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">MISSION</text>
             </g>
 
             <!-- LANGLEY anchor: (728, 1070) -->
             <g class="service-city" data-region="fraser-valley" transform="translate(728 1070)">
-              <g transform="scale(4) translate(-12 -22)" filter="url(#node-glow)">
+              <g transform="scale(4) translate(-12 -22)">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#E86C2D" stroke-width="0.375" stroke-linejoin="round"/>
                 <circle cx="12" cy="9" r="2.5" fill="none" stroke="#E86C2D" stroke-width="0.375"/>
               </g>
-              <circle class="city-pulse" cx="0" cy="0" r="28" fill="none" stroke="#E86C2D" stroke-width="1.5"/>
               <text x="0" y="52" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="38" font-weight="700" fill="#FCF8F8" letter-spacing="0.06em">LANGLEY</text>
             </g>
           </svg>
