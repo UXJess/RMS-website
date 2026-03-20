@@ -675,10 +675,10 @@
               <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
-          <a href="mailto:andrew000089@gmail.com" style="text-decoration:none;" class="cov-row">
+          <a href="mailto:rockymsolutions@gmail.com" style="text-decoration:none;" class="cov-row">
             <div>
               <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Email</div>
-              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">andrew000089@gmail.com</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">rockymsolutions@gmail.com</div>
             </div>
             <div class="card-arrow" style="width:36px;height:36px;">
               <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -737,33 +737,33 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
             <div>
               <label class="field-label">First Name</label>
-              <input type="text" placeholder="First name" required class="field-input" />
+              <input type="text" name="first_name" placeholder="First name" required class="field-input" />
             </div>
             <div>
               <label class="field-label">Last Name</label>
-              <input type="text" placeholder="Last name" required class="field-input" />
+              <input type="text" name="last_name" placeholder="Last name" required class="field-input" />
             </div>
           </div>
 
           <div style="margin-bottom:1rem;">
             <label class="field-label">Company</label>
-            <input type="text" placeholder="Your company name" class="field-input" />
+            <input type="text" name="company" placeholder="Your company name" class="field-input" />
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
             <div>
               <label class="field-label">Phone</label>
-              <input type="tel" placeholder="(604) 000-0000" class="field-input" />
+              <input type="tel" name="phone" placeholder="(604) 000-0000" class="field-input" />
             </div>
             <div>
               <label class="field-label">Email</label>
-              <input type="email" placeholder="you@company.com" required class="field-input" />
+              <input type="email" name="email" placeholder="you@company.com" required class="field-input" />
             </div>
           </div>
 
           <div style="margin-bottom:1rem;">
             <label class="field-label">Service Needed</label>
-            <select required class="field-input">
+            <select name="service" required class="field-input">
               <option value="" disabled selected>Select a service</option>
               <option>Safety Compliance &amp; Oversight</option>
               <option>Training &amp; Engagement</option>
@@ -776,12 +776,12 @@
 
           <div style="margin-bottom:1rem;">
             <label class="field-label">Site Location</label>
-            <input type="text" placeholder="City / Project address" class="field-input" />
+            <input type="text" name="site_location" placeholder="City / Project address" class="field-input" />
           </div>
 
           <div style="margin-bottom:1.75rem;">
             <label class="field-label">Message</label>
-            <textarea rows="4" placeholder="Project scope, start date, duration..." class="field-input" style="resize:none;"></textarea>
+            <textarea name="message" rows="4" placeholder="Project scope, start date, duration..." class="field-input" style="resize:none;"></textarea>
           </div>
 
           <button type="submit" class="btn btn-copper" style="width:100%;justify-content:center;font-size:0.88rem;padding:1.1rem;">
@@ -845,7 +845,7 @@
           <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Contact</div>
           <div style="display:flex;flex-direction:column;gap:0.7rem;">
             <a href="tel:+12368891644" class="foot-link">(236) 889-1644</a>
-            <a href="mailto:andrew000089@gmail.com" class="foot-link" style="word-break:break-all;">andrew000089@gmail.com</a>
+            <a href="mailto:rockymsolutions@gmail.com" class="foot-link" style="word-break:break-all;">rockymsolutions@gmail.com</a>
             <span class="foot-link" style="cursor:default;">Maple Ridge, BC</span>
           </div>
         </div>
@@ -881,13 +881,26 @@
       nav.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    // Form success state
+    // Form submission — sends to rockymsolutions@gmail.com via Formspree
     function rmsFormSubmit(form) {
-      Array.from(form.children).forEach(el => {
-        if (!el.classList.contains('form-success')) el.style.display = 'none';
+      const data = new FormData(form);
+      fetch('https://formspree.io/f/xlgpvoyg', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          Array.from(form.children).forEach(el => {
+            if (!el.classList.contains('form-success')) el.style.display = 'none';
+          });
+          const success = form.querySelector('.form-success');
+          success.style.display = 'flex';
+        } else {
+          alert('Something went wrong. Please email us directly at rockymsolutions@gmail.com');
+        }
+      }).catch(() => {
+        alert('Something went wrong. Please email us directly at rockymsolutions@gmail.com');
       });
-      const success = form.querySelector('.form-success');
-      success.style.display = 'flex';
     }
   </script>
 
