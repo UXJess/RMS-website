@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strata Property Maintenance Maple Ridge | Rocky Mountain Solutions</title>
+  <meta name="description" content="Reliable strata property maintenance, handyman services, and seasonal contracts for strata councils and property managers in Maple Ridge and the Lower Mainland. Insured, WorkSafeBC compliant. Request a free quote." />
+  <link rel="canonical" href="https://rockymountainsolutions.ca/strata-maintenance.html" />
+  <meta property="og:title" content="Strata Property Maintenance | Rocky Mountain Solutions" />
+  <meta property="og:description" content="Dependable maintenance and repairs for strata properties in Maple Ridge. Common area care, pressure washing, preventative maintenance, seasonal contracts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rockymountainsolutions.ca/strata-maintenance.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rms-dark':       '#1A1C1E',
+            'rms-bg':         '#FCF8F8',
+            'rms-copper':     '#E86C2D',
+            'rms-text':       '#3C3E40',
+            'rms-copper-dark':'#C45520',
+          },
+          fontFamily: {
+            sans: ['Sherika', '"Public Sans"', 'system-ui', 'sans-serif'],
+            serif:['"Public Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Roboto Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Sherika';
+      src: url('fonts/Sherika-Bold copy.otf') format('opentype');
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #FCF8F8; color: #1A1C1E; font-family: 'Public Sans', system-ui, sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* ── CONTAINER ── */
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 0 2.15rem; }
+
+    /* ── NAV ── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      transition: background 0.35s, border-color 0.35s, backdrop-filter 0.35s;
+    }
+    #nav.scrolled {
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(26,28,30,0.08);
+      backdrop-filter: blur(14px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 118px; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-link {
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #fff; }
+    .nav-link.active { color: #fff; }
+    #nav.scrolled .nav-link { color: rgba(26,28,30,0.6); }
+    #nav.scrolled .nav-link:hover, #nav.scrolled .nav-link.active { color: #E86C2D; }
+
+    /* ── NAV DROPDOWN ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      background: none; cursor: pointer; border: none; padding: 0;
+      display: flex; align-items: center; gap: 0.3rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.75); transition: color 0.2s;
+    }
+    .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #fff; }
+    #nav.scrolled .nav-dropdown-toggle { color: rgba(26,28,30,0.6); }
+    #nav.scrolled .nav-dropdown:hover .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-panel {
+      position: absolute; top: calc(100% + 1.25rem); left: -1.25rem;
+      background: rgba(13,14,15,0.97);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 3px; padding: 0.5rem 0;
+      display: none; flex-direction: column;
+      min-width: 210px; backdrop-filter: blur(14px); z-index: 20;
+    }
+    .nav-dropdown:hover .nav-dropdown-panel { display: flex; }
+    .nav-dropdown-item {
+      padding: 0.6rem 1.25rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55); text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-dropdown-item:hover { color: #E86C2D; background: rgba(232,108,45,0.05); }
+    .nav-dropdown-item.active { color: #E86C2D; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: 0.8rem; font-weight: 700; line-height: 1;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.65rem 1.35rem 0.55rem; border-radius: 3px;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: background 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-copper { background: #E86C2D; color: #fff; }
+    .btn-copper:hover { background: #C45520; }
+    .btn-dark { background: #1A1C1E; color: #FCF8F8; }
+    .btn-dark:hover { background: #2a2e32; }
+    .btn-outline-light {
+      background: transparent; color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.32);
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.05); }
+    .btn-outline-dark {
+      background: transparent; color: #1A1C1E;
+      border: 1.5px solid rgba(26,28,30,0.3);
+    }
+    .btn-outline-dark:hover { border-color: #1A1C1E; }
+    .btn-lg { font-size: 1rem; padding: 1.1rem 2.25rem 1rem; }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      font-family: 'Roboto Mono', 'Courier New', monospace;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+
+    /* ── DISPLAY T1 ── */
+    .t1 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.551rem, 6.195vw, 5.830rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+
+    /* ── SECTION H2 ── */
+    .h2 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.25rem, 4vw, 4rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    /* ── H3 ── */
+    .h3 {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 900; line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── DIVIDER RULE ── */
+    .rule { width: 48px; height: 3px; background: #E86C2D; }
+
+    /* ── HERO ── */
+    .hero {
+      height: 100vh; min-height: 640px;
+      background: #E86C2D;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-end;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 90px 90px;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse 150% 90% at 50% 100%, rgba(26,28,30,0.18) 0%, rgba(26,28,30,0.06) 50%, transparent 80%);
+    }
+    .hero-content { position: relative; z-index: 10; max-width: 780px; padding: 0 4rem 0 2rem; text-align: right; margin-top: 10vh; }
+    .hero-logo-bg {
+      position: absolute; left: 2%; top: 50%;
+      transform: translateY(-50%);
+      z-index: 1; opacity: 0.40; pointer-events: none;
+    }
+
+    /* scroll cue */
+    .scroll-cue {
+      position: absolute; bottom: 2.75rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      z-index: 10; opacity: 1;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ── TICKER ── */
+    .ticker-outer { overflow: hidden; }
+    .ticker-track {
+      display: flex; gap: 3rem; width: max-content;
+      animation: scroll-ticker 30s linear infinite;
+    }
+    @keyframes scroll-ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      display: flex; align-items: center; gap: 10px;
+      white-space: nowrap;
+      font-family: 'Roboto Mono', 'Courier New', monospace;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(252,248,248,0.6);
+    }
+    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(252,248,248,0.35); flex-shrink: 0; }
+
+    /* ── SERVICE ICON CARDS (inverted — light on cream) ── */
+    .svc-icon-card {
+      background: #fff;
+      border: 1px solid rgba(26,28,30,0.09);
+      border-radius: 3px; padding: 2rem 1.75rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .svc-icon-card:hover {
+      border-color: rgba(232,108,45,0.35);
+      box-shadow: 0 4px 24px rgba(232,108,45,0.07);
+    }
+    .svc-icon {
+      width: 44px; height: 44px;
+      border: 1.5px solid rgba(232,108,45,0.45);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── SERVICE LIST GRID ── */
+    .svc-list { list-style: none; }
+    .svc-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(26,28,30,0.07);
+      font-size: 0.875rem; line-height: 1.55; color: #3C3E40;
+    }
+    .svc-list li:last-child { border-bottom: none; }
+    .svc-list li::before {
+      content: '';
+      display: block; flex-shrink: 0;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: #E86C2D; margin-top: 0.42rem;
+    }
+
+    /* ── PROCESS NUM ── */
+    .proc-num {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(4rem, 6vw, 6rem);
+      font-weight: 900; line-height: 1;
+      color: rgba(26,28,30,0.06);
+      letter-spacing: -0.04em;
+      position: absolute; top: -0.5rem; left: 0;
+    }
+
+    /* ── STAT NUM ── */
+    .stat-num {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900; line-height: 1;
+      letter-spacing: -0.025em;
+    }
+
+    /* ── FORM ── */
+    .field-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #595B5D; display: block; margin-bottom: 0.45rem;
+    }
+    .field-input {
+      width: 100%;
+      background: #fff;
+      border: 1px solid rgba(26,28,30,0.13); border-radius: 3px;
+      padding: 0.85rem 1rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.9rem; color: #1A1C1E;
+      outline: none; transition: border-color 0.2s; appearance: none;
+    }
+    .field-input:focus { border-color: #E86C2D; }
+    .field-input::placeholder { color: #aaa; }
+
+    /* ── COV ROW (used in contact) ── */
+    .cov-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.75rem 0 1.75rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+    }
+    .cov-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .card-arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      border: 1px solid rgba(255,255,255,0.28); border-radius: 50%;
+      transition: background 0.25s, border-color 0.25s;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER NAV ── */
+    .foot-link {
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.82rem; color: rgba(252,248,248,0.45);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .foot-link:hover { color: rgba(252,248,248,0.8); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .split-2 { grid-template-columns: 1fr !important; }
+      .svc-3col { grid-template-columns: 1fr 1fr !important; }
+      .svc-4col { grid-template-columns: 1fr 1fr !important; }
+      .stats-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      .proc-4  { grid-template-columns: repeat(2, 1fr) !important; }
+      .footer-cols { grid-template-columns: 1fr 1fr !important; gap: 2.5rem !important; }
+      #mob-cta { display: block !important; }
+      .hero { align-items: center; }
+      .hero-content { text-align: center; padding: 0 1.5rem; margin-top: 0; }
+      .hero-logo-bg { display: none; }
+    }
+    @media (max-width: 600px) {
+      .svc-3col { grid-template-columns: 1fr !important; }
+      .svc-4col { grid-template-columns: 1fr !important; }
+      .stats-4  { grid-template-columns: 1fr !important; }
+      .proc-4   { grid-template-columns: 1fr !important; }
+      .footer-cols { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Rocky Mountain Solutions",
+    "description": "Strata property maintenance, handyman services, and seasonal contracts for property managers in Maple Ridge and the Lower Mainland.",
+    "url": "https://rockymountainsolutions.ca/strata-maintenance.html",
+    "telephone": "+12368891644",
+    "email": "rockymsolutions@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maple Ridge",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "areaServed": ["Maple Ridge", "Pitt Meadows", "Coquitlam", "Port Coquitlam", "Mission", "Langley"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════ -->
+  <header id="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:86px;width:auto;" />
+        </a>
+        <nav class="nav-links">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              Services
+              <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-panel">
+              <a href="index.html" class="nav-dropdown-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                Safety Support
+              </a>
+              <a href="strata-maintenance.html" class="nav-dropdown-item active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Strata Maintenance
+              </a>
+              <a href="home-renovations.html" class="nav-dropdown-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                Home Renovations
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="index.html#coverage" class="nav-link">Coverage</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+12368891644" class="btn btn-dark">Call Now</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-logo-bg" aria-hidden="true">
+      <img src="assets/logo-rms1024.png" alt=""
+           style="width:min(58vw,640px);" />
+    </div>
+
+    <div class="hero-content">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem;">
+        Strata &amp; Property Maintenance — Maple Ridge, BC
+      </div>
+
+      <h1 class="t1" style="color:#FCF8F8;">
+        Strata Property<br />Maintenance in<br /><span style="color:#1A1C1E;">Maple Ridge &amp; Beyond.</span>
+      </h1>
+
+      <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(255,255,255,0.8);line-height:1.65;max-width:480px;margin-left:auto;">
+        Dependable maintenance and repairs to keep your strata property safe, clean, and operating smoothly — without the headache of managing multiple contractors.
+      </p>
+
+      <div style="display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-dark btn-lg">Request a Quote</a>
+        <a href="tel:+12368891644" class="btn btn-outline-light btn-lg">Call (236) 889-1644</a>
+      </div>
+
+      <div class="eyebrow" style="color:rgba(255,255,255,0.5);margin-top:2.25rem;">
+        Insured &amp; Certified &nbsp;·&nbsp; WorkSafeBC Aware &nbsp;·&nbsp; Maple Ridge, BC
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.7);font-size:8px;">Scroll</div>
+      <svg width="18" height="28" viewBox="0 0 18 28" fill="none">
+        <rect x="6" y="0.5" width="6" height="11" rx="3" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+        <circle cx="9" cy="5" r="1.8" fill="#1A1C1E"/>
+        <path d="M4 19l5 6 5-6" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       TRUST TICKER
+  ═══════════════════════════════════════ -->
+  <div style="background:#3C3E40;border-bottom:1px solid rgba(0,0,0,0.18);">
+    <div class="ticker-outer" style="padding:11px 0;">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot"></span>Preventative Maintenance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Handyman Services</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Seasonal Contracts</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Common Area Care</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Pressure Washing</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Snow Removal &amp; De-icing</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Emergency Call Outs</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Strata Council Support</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Property Manager Preferred</span>
+        <!-- duplicate -->
+        <span class="ticker-item"><span class="ticker-dot"></span>Preventative Maintenance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Handyman Services</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Seasonal Contracts</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Common Area Care</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Pressure Washing</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Snow Removal &amp; De-icing</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Emergency Call Outs</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Strata Council Support</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Property Manager Preferred</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       OUR MAINTENANCE SERVICES
+  ═══════════════════════════════════════ -->
+  <section id="services" style="background:#FCF8F8;padding:7rem 0 5rem;">
+    <div class="wrap">
+
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.5rem;flex-wrap:wrap;gap:1.5rem;">
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Our Maintenance Services</div>
+          <h2 class="h2" style="color:#1A1C1E;max-width:560px;">
+            Comprehensive Strata Care<br /><span style="color:#E86C2D;">Across the Lower Mainland.</span>
+          </h2>
+          <p style="margin-top:1.25rem;font-size:0.975rem;line-height:1.75;color:#595B5D;max-width:540px;">
+            One reliable contractor for all your strata's maintenance needs — from regular handyman work to seasonal contracts. No juggling multiple vendors.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-dark btn-lg">Get a Free Quote</a>
+      </div>
+
+      <!-- Service cards: 3-column grid -->
+      <div class="svc-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem;">
+
+        <!-- General Repairs -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">01</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">General Repairs</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Doors, fixtures, drywall, baseboards, caulking, and small repairs that keep units and common areas in top condition.</p>
+        </div>
+
+        <!-- Pressure Washing -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">02</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">Pressure Washing</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Siding, decks, sidewalks, patios, and parkades. Removes buildup, improves curb appeal, and protects building surfaces.</p>
+        </div>
+
+        <!-- Gutter Cleaning -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 22V12h6v10" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">03</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">Gutter &amp; Roof Cleaning</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Keep gutters clear and functional — preventing water damage, ice backup, and costly structural repairs down the road.</p>
+        </div>
+
+        <!-- Painting & Touch-Ups -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M18 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2z" stroke="#E86C2D" stroke-width="1.5"/>
+              <path d="M9 12h6M12 9v6" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">04</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">Painting &amp; Touch-Ups</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Interior and exterior paint touch-ups for common areas, stairwells, parkades, and unit move-in/move-out refreshes.</p>
+        </div>
+
+        <!-- Common Area Care -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="3" width="20" height="14" rx="2" stroke="#E86C2D" stroke-width="1.5"/>
+              <path d="M8 21h8M12 17v4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">05</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">Common Area Care</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Lobbies, hallways, lighting checks, janitorial support, and ongoing attention to the areas every resident and visitor sees first.</p>
+        </div>
+
+        <!-- Emergency Call Outs -->
+        <div class="svc-icon-card">
+          <div class="svc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="#E86C2D" stroke-width="1.5"/>
+              <path d="M12 8v4M12 16h.01" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">06</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.6rem;line-height:1.2;letter-spacing:-0.01em;">Emergency Call Outs</h3>
+          <p style="font-size:0.82rem;line-height:1.7;color:#595B5D;">Fast response for urgent maintenance needs. When something breaks that can't wait, one call gets it handled.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       STRATA PARTNERSHIPS
+  ═══════════════════════════════════════ -->
+  <section style="background:#ffffff;padding:6rem 0;border-top:1px solid rgba(26,28,30,0.07);">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
+
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.9rem;">Who We Work With</div>
+          <div class="rule" style="margin-bottom:2rem;"></div>
+          <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.75rem;">
+            Dedicated Support<br />for Strata Properties.
+          </h2>
+          <p style="font-size:0.975rem;line-height:1.75;color:#3C3E40;margin-bottom:2.5rem;">
+            From routine upkeep to full seasonal contracts, RMS provides the consistent, professional service that property managers and strata councils rely on — without the overhead of managing multiple trade vendors.
+          </p>
+          <p style="font-size:0.875rem;line-height:1.75;color:#595B5D;margin-bottom:2.5rem;">
+            When a job requires a certified plumber, electrician, or carpenter, qualified tradespeople are brought in to protect insurance coverage and maintain all applicable warranties. You get one point of contact regardless of the complexity.
+          </p>
+          <a href="#contact" class="btn btn-dark">Start the Conversation</a>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+          <!-- Strata Councils -->
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;">
+            <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="7" r="4" stroke="#E86C2D" stroke-width="1.5"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.4rem;">Strata Councils</h3>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Clear communication, proper documentation, and respectful service that reflects well on council.</p>
+            </div>
+          </div>
+
+          <!-- Property Managers -->
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;">
+            <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="9" y="3" width="6" height="4" rx="1" stroke="#E86C2D" stroke-width="1.5"/>
+                <path d="M9 12l2 2 4-4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.4rem;">Property Managers</h3>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">One reliable contact for multiple buildings. Streamline your vendor list and reduce response time.</p>
+            </div>
+          </div>
+
+          <!-- Multi-Unit Buildings -->
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;">
+            <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="7" width="20" height="14" rx="2" stroke="#E86C2D" stroke-width="1.5"/>
+                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v4M10 14h4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;margin-bottom:0.4rem;">Multi-Unit Buildings</h3>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Townhouse complexes, low-rise and mid-rise buildings — ongoing care contracts available for full buildings.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SERVICE DETAILS — Four categories
+  ═══════════════════════════════════════ -->
+  <section style="background:#FCF8F8;padding:7rem 0;">
+    <div class="wrap">
+
+      <div style="margin-bottom:4rem;">
+        <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Full Scope of Services</div>
+        <h2 class="h2" style="color:#1A1C1E;max-width:600px;">
+          Everything Your Building<br />Needs — Under One Contract.
+        </h2>
+        <p style="margin-top:1.25rem;font-size:0.975rem;line-height:1.75;color:#595B5D;max-width:580px;">
+          The following services are available as part of regular maintenance agreements or one-off work orders. Not finding something? Reach out — most building maintenance requests are considered.
+        </p>
+      </div>
+
+      <div class="svc-4col" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
+
+        <!-- General Interior -->
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:36px;height:3px;background:#E86C2D;margin-bottom:1.5rem;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:0.95rem;font-weight:900;color:#1A1C1E;margin-bottom:1.25rem;letter-spacing:-0.005em;line-height:1.3;">General Interior<br />Maintenance</h3>
+          <ul class="svc-list">
+            <li>Drywall repair &amp; patching</li>
+            <li>Paint touch-ups</li>
+            <li>Baseboard &amp; trim repair</li>
+            <li>Caulking &amp; sealing windows</li>
+            <li>Door repair &amp; replacements</li>
+            <li>Common area cleaning / janitorial</li>
+            <li>Move-in / move-out damage repairs</li>
+          </ul>
+        </div>
+
+        <!-- General Exterior -->
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:36px;height:3px;background:#E86C2D;margin-bottom:1.5rem;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:0.95rem;font-weight:900;color:#1A1C1E;margin-bottom:1.25rem;letter-spacing:-0.005em;line-height:1.3;">General Exterior<br />Maintenance</h3>
+          <ul class="svc-list">
+            <li>Pressure washing — sidewalks &amp; patios</li>
+            <li>Exterior paint touch-ups</li>
+            <li>Gate &amp; fence repair</li>
+            <li>Parking &amp; parkade care</li>
+            <li>Exterior lighting checks</li>
+            <li>Signage &amp; address upkeep</li>
+          </ul>
+        </div>
+
+        <!-- Preventative -->
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:36px;height:3px;background:#E86C2D;margin-bottom:1.5rem;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:0.95rem;font-weight:900;color:#1A1C1E;margin-bottom:1.25rem;letter-spacing:-0.005em;line-height:1.3;">Preventative<br />Maintenance</h3>
+          <ul class="svc-list">
+            <li>Light &amp; fixture checks and replacement</li>
+            <li>Door &amp; hinge checks and replacement</li>
+            <li>Garage door check &amp; cleaning</li>
+            <li>Security &amp; fire exit checks</li>
+            <li>Caulking inspections</li>
+            <li>Seasonal readiness walkthroughs</li>
+          </ul>
+        </div>
+
+        <!-- Seasonal Contracts -->
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:36px;height:3px;background:#E86C2D;margin-bottom:1.5rem;"></div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:0.95rem;font-weight:900;color:#1A1C1E;margin-bottom:1.25rem;letter-spacing:-0.005em;line-height:1.3;">Seasonal<br />Contracts</h3>
+          <ul class="svc-list">
+            <li>Lawn care &amp; maintenance</li>
+            <li>Snow removal &amp; de-icing</li>
+            <li>Roof &amp; gutter cleaning</li>
+            <li>Spring/fall property inspection</li>
+            <li>Irrigation &amp; drainage checks</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SAFETY CREDENTIALS
+  ═══════════════════════════════════════ -->
+  <section style="background:#ffffff;padding:6rem 0;border-top:1px solid rgba(26,28,30,0.07);">
+    <div class="wrap">
+
+      <div style="margin-bottom:3.5rem;">
+        <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Credentials &amp; Trust</div>
+        <h2 class="h2" style="color:#1A1C1E;max-width:600px;">
+          Safety Credentials Built<br /><span style="color:#E86C2D;">Into Every Job.</span>
+        </h2>
+        <p style="margin-top:1.25rem;font-size:0.975rem;line-height:1.75;color:#595B5D;max-width:580px;">
+          Rocky Mountain Solutions is operated by a certified Construction Safety Officer (CSO) and OFA Level 3 first aid professional. Safe work practices and procedures are embedded into every service — not an afterthought.
+        </p>
+      </div>
+
+      <div class="svc-4col" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:3rem;">
+
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="#E86C2D" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">Designation</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.2;margin-bottom:0.6rem;">Construction Safety Officer</h3>
+          <p style="font-size:0.8rem;line-height:1.65;color:#595B5D;">CSO certified — hazard identification, safe work procedures, and WorkSafeBC compliance on every job site.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#E86C2D" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">First Aid</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.2;margin-bottom:0.6rem;">OFA Level 3 Certified</h3>
+          <p style="font-size:0.8rem;line-height:1.65;color:#595B5D;">Advanced first aid certification — the highest field-level designation in BC.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="#E86C2D" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">Insurance</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.2;margin-bottom:0.6rem;">Proof of Insurance Included</h3>
+          <p style="font-size:0.8rem;line-height:1.65;color:#595B5D;">Insurance documentation is included in all strata contracts and available upon request at any time.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:2rem 1.75rem;">
+          <div style="width:44px;height:44px;border:1.5px solid rgba(232,108,45,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#E86C2D" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#E86C2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="eyebrow" style="color:rgba(232,108,45,0.7);font-size:8px;margin-bottom:0.55rem;">Certifications</div>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.2;margin-bottom:0.6rem;">Certificates Available</h3>
+          <p style="font-size:0.8rem;line-height:1.65;color:#595B5D;">Where the scope of work requires it, certifications are included in the contract and available upon request.</p>
+        </div>
+
+      </div>
+
+      <!-- Ongoing training note -->
+      <div style="padding:2rem 2.25rem;border:1px solid rgba(26,28,30,0.09);border-radius:3px;display:flex;align-items:flex-start;gap:1.5rem;background:#fff;">
+        <div style="flex-shrink:0;"><div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;margin-top:0.35rem;"></div></div>
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.5rem;">Additional Certifications</div>
+          <p style="font-size:0.875rem;line-height:1.75;color:#595B5D;max-width:760px;">
+            New certifications are regularly added. All credentials and proof of insurance are included in the signed Strata Maintenance Contract and available upon request at any time.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SCOPE & CLIENT PROTECTIONS
+  ═══════════════════════════════════════ -->
+  <section style="background:#FCF8F8;padding:7rem 0;">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;">
+
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.9rem;">How We Work Together</div>
+          <div class="rule" style="margin-bottom:2rem;"></div>
+          <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.75rem;">
+            A Contract That<br />Protects Both Sides.
+          </h2>
+          <p style="font-size:1rem;line-height:1.75;color:#3C3E40;margin-bottom:1.25rem;">
+            Every strata maintenance relationship starts with a written contract. The RMS Strata Maintenance Contract covers the full scope of services, payment terms, and legal protections so both parties are clear from day one.
+          </p>
+          <p style="font-size:0.9rem;line-height:1.75;color:#595B5D;margin-bottom:2.5rem;">
+            When certified trades are required, qualified professionals are engaged — protecting your building's warranties and meeting all legal requirements. You always know who is on-site and why.
+          </p>
+          <a href="#contact" class="btn btn-dark btn-lg">Request a Contract Overview</a>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:1.75rem;display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;flex-shrink:0;margin-top:0.35rem;"></div>
+            <div>
+              <div class="eyebrow" style="color:#1A1C1E;margin-bottom:0.45rem;">Defined Scope of Services</div>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Every service, frequency, and expectation is itemized in writing — no ambiguity about what is and isn't included.</p>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:1.75rem;display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;flex-shrink:0;margin-top:0.35rem;"></div>
+            <div>
+              <div class="eyebrow" style="color:#1A1C1E;margin-bottom:0.45rem;">Transparent Payment Terms</div>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Rates, billing cycles, and payment expectations are agreed upon before a single tool is lifted.</p>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:1.75rem;display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;flex-shrink:0;margin-top:0.35rem;"></div>
+            <div>
+              <div class="eyebrow" style="color:#1A1C1E;margin-bottom:0.45rem;">Certified Trades When Required</div>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Work requiring a licensed plumber, electrician, or carpenter is outsourced to certified professionals — maintaining all warranties and insurance requirements.</p>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:1.75rem;display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;flex-shrink:0;margin-top:0.35rem;"></div>
+            <div>
+              <div class="eyebrow" style="color:#1A1C1E;margin-bottom:0.45rem;">Legal Protections for Both Parties</div>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">The full contract provides clear legal protections and liability terms for the client and RMS. A complete copy is available upon request.</p>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(26,28,30,0.09);border-radius:3px;padding:1.75rem;display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#E86C2D;flex-shrink:0;margin-top:0.35rem;"></div>
+            <div>
+              <div class="eyebrow" style="color:#1A1C1E;margin-bottom:0.45rem;">Insurance &amp; Certifications On File</div>
+              <p style="font-size:0.82rem;line-height:1.65;color:#595B5D;">Proof of insurance and all relevant certifications are included in every contract — available to strata councils and property managers at any time.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CTA BAND
+  ═══════════════════════════════════════ -->
+  <section style="background:#E86C2D;padding:6rem 2.15rem;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      <div class="eyebrow" style="color:rgba(26,28,30,0.55);margin-bottom:1rem;">Strata Maintenance · Maple Ridge, BC</div>
+      <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.5rem;">Reliable Maintenance<br />You Don't Have to Chase.</h2>
+      <p style="font-size:1.05rem;line-height:1.65;color:rgba(26,28,30,0.7);margin-bottom:2.75rem;">
+        Ready to put a dependable maintenance professional on your building? Request a quote or call directly to discuss a contract.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+12368891644" class="btn btn-dark btn-lg">Call (236) 889-1644</a>
+        <a href="#contact" class="btn btn-outline-dark btn-lg">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" style="background:#1A1C1E;padding:8rem 0;">
+    <div class="wrap">
+      <div class="split-2" style="display:grid;grid-template-columns:1fr 1.15fr;gap:6rem;align-items:start;">
+
+        <!-- Info -->
+        <div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Get in Touch</div>
+          <h2 class="h2" style="color:#FCF8F8;margin-bottom:2rem;">
+            Ready to Talk<br />Maintenance?
+          </h2>
+          <p style="font-size:0.975rem;line-height:1.75;color:rgba(252,248,248,0.55);margin-bottom:3rem;max-width:360px;">
+            Fill out the form or call directly. We'll discuss your building's needs and put together a straightforward proposal.
+          </p>
+
+          <a href="tel:+12368891644" style="text-decoration:none;" class="cov-row">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Phone</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#FCF8F8;">(236) 889-1644</div>
+            </div>
+            <div class="card-arrow" style="width:36px;height:36px;">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </a>
+          <a href="mailto:rockymsolutions@gmail.com" style="text-decoration:none;" class="cov-row">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Email</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">rockymsolutions@gmail.com</div>
+            </div>
+            <div class="card-arrow" style="width:36px;height:36px;">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </a>
+          <div class="cov-row" style="cursor:default;">
+            <div>
+              <div class="eyebrow" style="color:rgba(252,248,248,0.35);font-size:8px;margin-bottom:0.3rem;">Based In</div>
+              <div style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#FCF8F8;">Maple Ridge, BC</div>
+            </div>
+          </div>
+
+          <div style="margin-top:2.25rem;display:flex;flex-direction:column;gap:0.45rem;">
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> Insured &amp; Certified
+            </div>
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> Free Quote / Estimate
+            </div>
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> Seasonal Contracts Available
+            </div>
+            <div class="eyebrow" style="color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:#E86C2D;">✓</span> Serving Maple Ridge &amp; Lower Mainland
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form style="background:#FCF8F8;border-radius:3px;padding:2.75rem;" onsubmit="rmsFormSubmit(this);return false;">
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:1.75rem;">Request a Quote</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <label class="field-label">First Name</label>
+              <input type="text" name="first_name" placeholder="First name" required class="field-input" />
+            </div>
+            <div>
+              <label class="field-label">Last Name</label>
+              <input type="text" name="last_name" placeholder="Last name" required class="field-input" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Company / Building Name</label>
+            <input type="text" name="company" placeholder="Property name or management company" class="field-input" />
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <label class="field-label">Phone</label>
+              <input type="tel" name="phone" placeholder="(604) 000-0000" class="field-input" />
+            </div>
+            <div>
+              <label class="field-label">Email</label>
+              <input type="email" name="email" placeholder="you@company.com" required class="field-input" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Service Needed</label>
+            <select name="service" required class="field-input">
+              <option value="" disabled selected>Select a service type</option>
+              <option>General Repairs &amp; Handyman</option>
+              <option>Pressure Washing</option>
+              <option>Gutter &amp; Roof Cleaning</option>
+              <option>Painting &amp; Touch-Ups</option>
+              <option>Common Area Care</option>
+              <option>Seasonal Contract (Lawn / Snow)</option>
+              <option>Preventative Maintenance</option>
+              <option>Ongoing Maintenance Contract</option>
+              <option>Emergency Call Out</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label class="field-label">Property Address / City</label>
+            <input type="text" name="property_location" placeholder="City or property address" class="field-input" />
+          </div>
+
+          <div style="margin-bottom:1.75rem;">
+            <label class="field-label">Message</label>
+            <textarea name="message" rows="4" placeholder="Describe your building's needs, number of units, services required..." class="field-input" style="resize:none;"></textarea>
+          </div>
+
+          <input type="hidden" name="_source" value="strata-maintenance" />
+
+          <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;font-size:0.88rem;padding:1.1rem;">
+            Submit Quote Request
+          </button>
+          <div class="form-success" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1rem;text-align:center;gap:1.25rem;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#E86C2D;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1rem;font-weight:900;color:#1A1C1E;line-height:1.5;letter-spacing:-0.01em;max-width:280px;">Request received. We'll be in touch within 1–2 business days to discuss your building's needs.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer style="background:#0d0e0f;border-top:1px solid rgba(255,255,255,0.05);padding:5.5rem 0 2.75rem;">
+    <div class="wrap">
+
+      <div class="footer-cols" style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4.5rem;">
+
+        <div>
+          <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:148px;width:auto;margin-bottom:1.25rem;" />
+          <p style="font-size:0.82rem;line-height:1.75;color:rgba(252,248,248,0.38);margin-bottom:1.75rem;max-width:280px;">
+            Strata maintenance, home renovations, and safety support for Maple Ridge and the Lower Mainland.
+          </p>
+          <a href="tel:+12368891644" class="btn btn-copper" style="font-size:0.75rem;padding:0.65rem 1.25rem;">Call Now</a>
+        </div>
+
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
+          <nav style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="index.html" class="foot-link">Safety Support</a>
+            <a href="strata-maintenance.html" class="foot-link">Strata Maintenance</a>
+            <a href="home-renovations.html" class="foot-link">Home Renovations</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Coverage Areas</div>
+          <nav style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="index.html#coverage" class="foot-link">Maple Ridge</a>
+            <a href="index.html#coverage" class="foot-link">Tri-Cities</a>
+            <a href="index.html#coverage" class="foot-link">Fraser Valley</a>
+            <a href="index.html#coverage" class="foot-link">Lower Mainland</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <a href="tel:+12368891644" class="foot-link">(236) 889-1644</a>
+            <a href="mailto:rockymsolutions@gmail.com" class="foot-link" style="word-break:break-all;">rockymsolutions@gmail.com</a>
+            <span class="foot-link" style="cursor:default;">Maple Ridge, BC</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div class="eyebrow" style="color:rgba(252,248,248,0.2);font-size:8px;">
+          &copy; 2025 Rocky Mountain Solutions &nbsp;·&nbsp; Maple Ridge, BC &nbsp;·&nbsp; Insured &amp; Certified
+        </div>
+        <div class="eyebrow" style="color:rgba(252,248,248,0.2);font-size:8px;">
+          Managing Your Risk. Expanding Your Solutions.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Mobile sticky CTA -->
+  <div id="mob-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;">
+    <a href="tel:+12368891644" class="btn btn-copper" style="display:block;text-align:center;border-radius:0;padding:1.1rem;font-size:0.85rem;letter-spacing:0.12em;width:100%;">
+      CALL FOR A QUOTE — TAP TO DIAL
+    </a>
+  </div>
+
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    function onResize() {
+      document.getElementById('mob-cta').style.display = window.innerWidth < 900 ? 'block' : 'none';
+    }
+    onResize();
+    window.addEventListener('resize', onResize, { passive: true });
+
+    function rmsFormSubmit(form) {
+      const data = new FormData(form);
+      fetch('https://formspree.io/f/xlgpvoyg', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          Array.from(form.children).forEach(el => {
+            if (!el.classList.contains('form-success')) el.style.display = 'none';
+          });
+          form.querySelector('.form-success').style.display = 'flex';
+        } else {
+          alert('Something went wrong. Please email us directly at rockymsolutions@gmail.com');
+        }
+      }).catch(() => {
+        alert('Something went wrong. Please email us directly at rockymsolutions@gmail.com');
+      });
+    }
+  </script>
+
+</body>
+</html>
