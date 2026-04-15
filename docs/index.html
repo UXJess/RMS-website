@@ -321,9 +321,91 @@
     }
     .city-pulse { animation: map-pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 
+    /* ── NAV DROPDOWN ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      background: none; cursor: pointer; border: none; padding: 0;
+      display: flex; align-items: center; gap: 0.3rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6); transition: color 0.2s;
+    }
+    .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-panel {
+      position: absolute; top: calc(100% + 1.25rem); left: -1.25rem;
+      background: rgba(13,14,15,0.97);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 3px; padding: 0.5rem 0;
+      display: flex; flex-direction: column;
+      min-width: 210px; backdrop-filter: blur(14px); z-index: 20;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.15s ease, visibility 0.15s ease;
+      transition-delay: 0.45s;
+    }
+    .nav-dropdown:hover .nav-dropdown-panel {
+      opacity: 1; visibility: visible; pointer-events: auto;
+      transition-delay: 0s;
+    }
+    .nav-dropdown-item {
+      padding: 0.6rem 1.25rem;
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55); text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-dropdown-item:hover { color: #E86C2D; background: rgba(232,108,45,0.05); }
+    .nav-dropdown-item.active { color: #E86C2D; }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 8px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px; border-radius: 2px;
+      background: rgba(255,255,255,0.85);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE NAV OVERLAY ── */
+    #mob-nav {
+      position: fixed; inset: 0; z-index: 300;
+      background: #1A1C1E;
+      display: flex; flex-direction: column;
+      padding: 0 2rem 3rem;
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+    }
+    #mob-nav.open { transform: translateY(0); }
+    .mob-nav-link {
+      font-family: 'Sherika', 'Public Sans', system-ui, sans-serif;
+      font-size: clamp(1.75rem, 9vw, 3rem);
+      font-weight: 900; letter-spacing: -0.02em; line-height: 1.1;
+      color: rgba(252,248,248,0.85); text-decoration: none;
+      transition: color 0.2s; padding: 0.35rem 0; display: block;
+    }
+    .mob-nav-link:hover, .mob-nav-link.active { color: #E86C2D; }
+    .mob-nav-sub {
+      font-family: 'Public Sans', system-ui, sans-serif;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(252,248,248,0.45); text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 0; transition: color 0.2s;
+    }
+    .mob-nav-sub:hover, .mob-nav-sub.active { color: #E86C2D; }
+
     /* ── MOBILE ── */
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .hamburger { display: flex; }
       .cards-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 380px); }
       .split-2 { grid-template-columns: 1fr !important; }
       .stats-4 { grid-template-columns: repeat(2, 1fr) !important; }
@@ -353,12 +435,34 @@
           <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:86px;width:auto;" />
         </a>
         <nav class="nav-links">
-          <a href="#services" class="nav-link">Services</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              Services
+              <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-panel">
+              <a href="index.html" class="nav-dropdown-item active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                Safety Support
+              </a>
+              <a href="strata-maintenance.html" class="nav-dropdown-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Strata Maintenance
+              </a>
+              <a href="home-renovations.html" class="nav-dropdown-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                Home Renovations
+              </a>
+            </div>
+          </div>
           <a href="about.html" class="nav-link">About</a>
           <a href="#coverage" class="nav-link">Coverage</a>
           <a href="#contact"  class="nav-link">Contact</a>
           <a href="tel:+12368891644" class="btn btn-copper">Call Now</a>
         </nav>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -954,10 +1058,9 @@
         <div>
           <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
           <nav style="display:flex;flex-direction:column;gap:0.7rem;">
-            <a href="#services" class="foot-link">Safety Compliance</a>
-            <a href="#services" class="foot-link">Training &amp; Engagement</a>
-            <a href="#services" class="foot-link">Incident Response</a>
-            <a href="#services" class="foot-link">Documentation</a>
+            <a href="index.html" class="foot-link">Safety Support</a>
+            <a href="strata-maintenance.html" class="foot-link">Strata Maintenance</a>
+            <a href="home-renovations.html" class="foot-link">Home Renovations</a>
           </nav>
         </div>
 
@@ -996,6 +1099,45 @@
 
     </div>
   </footer>
+
+
+  <!-- ── MOBILE NAV OVERLAY ── -->
+  <div id="mob-nav" aria-hidden="true">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:118px;flex-shrink:0;">
+      <a href="/" style="display:flex;align-items:center;text-decoration:none;">
+        <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:86px;width:auto;" />
+      </a>
+      <button id="mob-nav-close" type="button" aria-label="Close menu"
+        style="background:none;border:none;cursor:pointer;padding:8px;color:rgba(252,248,248,0.55);line-height:0;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;flex-direction:column;flex:1;">
+      <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:0.75rem;">Services</div>
+      <a href="index.html" class="mob-nav-sub active">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Safety Support
+      </a>
+      <a href="strata-maintenance.html" class="mob-nav-sub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Strata Maintenance
+      </a>
+      <a href="home-renovations.html" class="mob-nav-sub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Home Renovations
+      </a>
+      <div style="border-top:1px solid rgba(255,255,255,0.07);margin:1.5rem 0;"></div>
+      <a href="about.html" class="mob-nav-link">About</a>
+      <a href="#coverage" class="mob-nav-link">Coverage</a>
+      <a href="#contact" class="mob-nav-link">Contact</a>
+      <div style="margin-top:auto;padding-top:2.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+        <a href="#contact" class="btn btn-copper btn-lg" style="justify-content:center;">Get a Quote</a>
+        <a href="tel:+12368891644" class="btn btn-outline-light btn-lg" style="justify-content:center;">Call (236) 889-1644</a>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Mobile sticky CTA -->
@@ -1044,6 +1186,27 @@
     }
     onResize();
     window.addEventListener('resize', onResize, { passive: true });
+
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const mobNav = document.getElementById('mob-nav');
+    function openMobNav() {
+      mobNav.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobNav() {
+      mobNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', openMobNav);
+    document.getElementById('mob-nav-close').addEventListener('click', closeMobNav);
+    mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
 
     // Form submission — sends to rockymsolutions@gmail.com via Formspree
     function rmsFormSubmit(form) {
