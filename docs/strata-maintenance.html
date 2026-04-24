@@ -84,9 +84,11 @@
       letter-spacing: 0.1em; text-transform: uppercase;
       color: rgba(255,255,255,0.75); transition: color 0.2s;
     }
-    .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #fff; }
+    .nav-dropdown-toggle:hover, .nav-dropdown.open .nav-dropdown-toggle { color: #fff; }
     #nav.scrolled .nav-dropdown-toggle { color: rgba(26,28,30,0.6); }
-    #nav.scrolled .nav-dropdown:hover .nav-dropdown-toggle { color: #E86C2D; }
+    #nav.scrolled .nav-dropdown.open .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-toggle svg { transition: transform 0.2s ease; }
+    .nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
     .nav-dropdown-panel {
       position: absolute; top: calc(100% + 1.25rem); left: -1.25rem;
       background: rgba(13,14,15,0.97);
@@ -96,11 +98,9 @@
       min-width: 210px; backdrop-filter: blur(14px); z-index: 20;
       opacity: 0; visibility: hidden; pointer-events: none;
       transition: opacity 0.15s ease, visibility 0.15s ease;
-      transition-delay: 0.45s;
     }
-    .nav-dropdown:hover .nav-dropdown-panel {
+    .nav-dropdown.open .nav-dropdown-panel {
       opacity: 1; visibility: visible; pointer-events: auto;
-      transition-delay: 0s;
     }
     .nav-dropdown-item {
       padding: 0.6rem 1.25rem;
@@ -438,9 +438,9 @@
               <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="nav-dropdown-panel">
-              <a href="index.html" class="nav-dropdown-item">
+              <a href="construction-safety.html" class="nav-dropdown-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                Safety Support
+                Construction Safety
               </a>
               <a href="strata-maintenance.html" class="nav-dropdown-item active">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -483,11 +483,11 @@
       </div>
 
       <h1 class="t1" style="color:#FCF8F8;">
-        Strata Property<br />Maintenance in<br /><span style="color:#1A1C1E;">Maple Ridge &amp; Beyond.</span>
+        Strata property maintenance in<br /><span style="color:#1A1C1E;">Maple Ridge &amp; beyond.</span>
       </h1>
 
       <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(255,255,255,0.8);line-height:1.65;max-width:480px;margin-left:auto;">
-        Dependable maintenance and repairs to keep your strata property safe, clean, and operating smoothly — without the headache of managing multiple contractors.
+        Dependable maintenance and repairs to keep your strata property safe, clean, and operating smoothly.
       </p>
 
       <div style="display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
@@ -1101,7 +1101,7 @@
         <div>
           <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:148px;width:auto;margin-bottom:1.25rem;" />
           <p style="font-size:0.82rem;line-height:1.75;color:rgba(252,248,248,0.38);margin-bottom:1.75rem;max-width:280px;">
-            Strata maintenance, home renovations, and safety support for Maple Ridge and the Lower Mainland.
+            Construction safety compliance, strata maintenance, and home renovations for Maple Ridge and the Lower Mainland.
           </p>
           <a href="tel:+12368891644" class="btn btn-copper" style="font-size:0.75rem;padding:0.65rem 1.25rem;">Call Now</a>
         </div>
@@ -1109,7 +1109,7 @@
         <div>
           <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
           <nav style="display:flex;flex-direction:column;gap:0.7rem;">
-            <a href="index.html" class="foot-link">Safety Support</a>
+            <a href="construction-safety.html" class="foot-link">Construction Safety</a>
             <a href="strata-maintenance.html" class="foot-link">Strata Maintenance</a>
             <a href="home-renovations.html" class="foot-link">Home Renovations</a>
           </nav>
@@ -1164,9 +1164,9 @@
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;flex-direction:column;flex:1;">
       <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:0.75rem;">Services</div>
-      <a href="index.html" class="mob-nav-sub">
+      <a href="construction-safety.html" class="mob-nav-sub">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        Safety Support
+        Construction Safety
       </a>
       <a href="strata-maintenance.html" class="mob-nav-sub active">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -1228,6 +1228,17 @@
     hamburger.addEventListener('click', openMobNav);
     document.getElementById('mob-nav-close').addEventListener('click', closeMobNav);
     mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
+
+    // Services dropdown – click to toggle
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    dropdownToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', function() {
+      dropdown.classList.remove('open');
+    });
 
     function rmsFormSubmit(form) {
       const data = new FormData(form);
