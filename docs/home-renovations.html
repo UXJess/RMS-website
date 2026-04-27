@@ -56,8 +56,8 @@
       transition: background 0.35s, border-color 0.35s, backdrop-filter 0.35s;
     }
     #nav.scrolled {
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid rgba(26,28,30,0.08);
+      background: rgba(13,14,15,0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       backdrop-filter: blur(14px);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 118px; }
@@ -66,13 +66,10 @@
       font-family: 'Public Sans', system-ui, sans-serif;
       font-size: 0.78rem; font-weight: 600;
       letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(255,255,255,0.75); text-decoration: none;
+      color: rgba(255,255,255,0.6); text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: #fff; }
-    .nav-link.active { color: #fff; }
-    #nav.scrolled .nav-link { color: rgba(26,28,30,0.6); }
-    #nav.scrolled .nav-link:hover, #nav.scrolled .nav-link.active { color: #E86C2D; }
+    .nav-link:hover { color: #E86C2D; }
 
     /* ── NAV DROPDOWN ── */
     .nav-dropdown { position: relative; }
@@ -82,11 +79,11 @@
       font-family: 'Public Sans', system-ui, sans-serif;
       font-size: 0.78rem; font-weight: 600;
       letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(255,255,255,0.75); transition: color 0.2s;
+      color: rgba(255,255,255,0.6); transition: color 0.2s;
     }
-    .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #fff; }
-    #nav.scrolled .nav-dropdown-toggle { color: rgba(26,28,30,0.6); }
-    #nav.scrolled .nav-dropdown:hover .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-toggle:hover, .nav-dropdown.open .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-toggle svg { transition: transform 0.2s ease; }
+    .nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
     .nav-dropdown-panel {
       position: absolute; top: calc(100% + 1.25rem); left: -1.25rem;
       background: rgba(13,14,15,0.97);
@@ -96,11 +93,9 @@
       min-width: 210px; backdrop-filter: blur(14px); z-index: 20;
       opacity: 0; visibility: hidden; pointer-events: none;
       transition: opacity 0.15s ease, visibility 0.15s ease;
-      transition-delay: 0.45s;
     }
-    .nav-dropdown:hover .nav-dropdown-panel {
+    .nav-dropdown.open .nav-dropdown-panel {
       opacity: 1; visibility: visible; pointer-events: auto;
-      transition-delay: 0s;
     }
     .nav-dropdown-item {
       padding: 0.6rem 1.25rem;
@@ -172,27 +167,27 @@
     /* ── HERO ── */
     .hero {
       height: 100vh; min-height: 640px;
-      background: #E86C2D;
+      background: #0d0e0f;
       display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-end;
+      justify-content: center; align-items: flex-start;
       position: relative; overflow: hidden;
     }
     .hero-grid {
       position: absolute; inset: 0; z-index: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+        linear-gradient(rgba(232,108,45,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,108,45,0.035) 1px, transparent 1px);
       background-size: 90px 90px;
     }
     .hero-glow {
-      position: absolute; inset: 0; z-index: 0;
-      background: radial-gradient(ellipse 150% 90% at 50% 100%, rgba(26,28,30,0.18) 0%, rgba(26,28,30,0.06) 50%, transparent 80%);
+      position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 45%, rgba(232,108,45,0.09) 0%, transparent 70%);
     }
-    .hero-content { position: relative; z-index: 10; max-width: 780px; padding: 0 4rem 0 2rem; text-align: right; margin-top: 10vh; }
+    .hero-content { position: relative; z-index: 10; max-width: 780px; padding: 0 2rem 0 4rem; text-align: left; margin-top: 10vh; }
     .hero-logo-bg {
-      position: absolute; left: 2%; top: 50%;
+      position: absolute; right: 2%; top: 50%;
       transform: translateY(-50%);
-      z-index: 1; opacity: 0.40; pointer-events: none;
+      z-index: 1; opacity: 0.14; pointer-events: none;
     }
 
     /* scroll cue */
@@ -200,7 +195,7 @@
       position: absolute; bottom: 2.75rem; left: 50%;
       transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 6px;
-      z-index: 10; opacity: 1;
+      z-index: 10; opacity: 0.5;
       animation: bob 2.2s ease-in-out infinite;
     }
     @keyframes bob {
@@ -224,9 +219,9 @@
       font-family: 'Roboto Mono', 'Courier New', monospace;
       font-size: 10px; font-weight: 700;
       letter-spacing: 0.14em; text-transform: uppercase;
-      color: rgba(252,248,248,0.6);
+      color: rgba(255,255,255,0.82);
     }
-    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(252,248,248,0.35); flex-shrink: 0; }
+    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; background: #E86C2D; flex-shrink: 0; }
 
     /* ── SERVICE ICON CARDS (inverted — light on cream) ── */
     .svc-icon-card {
@@ -334,7 +329,7 @@
       background: rgba(255,255,255,0.85);
       transition: transform 0.3s, opacity 0.3s;
     }
-    #nav.scrolled .hamburger span { background: rgba(26,28,30,0.7); }
+
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -428,9 +423,9 @@
               <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="nav-dropdown-panel">
-              <a href="index.html" class="nav-dropdown-item">
+              <a href="construction-safety.html" class="nav-dropdown-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                Safety Support
+                Construction Safety
               </a>
               <a href="strata-maintenance.html" class="nav-dropdown-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -445,7 +440,7 @@
           <a href="about.html" class="nav-link">About</a>
           <a href="index.html#coverage" class="nav-link">Coverage</a>
           <a href="#contact" class="nav-link">Contact</a>
-          <a href="tel:+12368891644" class="btn btn-dark">Call Now</a>
+          <a href="tel:+12368891644" class="btn btn-copper">Call Now</a>
         </nav>
         <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
           <span></span><span></span><span></span>
@@ -464,38 +459,38 @@
 
     <div class="hero-logo-bg" aria-hidden="true">
       <img src="assets/logo-rms1024.png" alt=""
-           style="width:min(58vw,640px);" />
+           style="width:min(58vw,640px);filter:grayscale(1) brightness(2);" />
     </div>
 
     <div class="hero-content">
-      <div class="eyebrow" style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem;">
+      <div class="eyebrow" style="color:rgba(232,108,45,0.85);margin-bottom:1.5rem;">
         Home Renovation Services — Maple Ridge, BC
       </div>
 
       <h1 class="t1" style="color:#FCF8F8;">
-        Home Renovations<br />in Maple Ridge<br /><span style="color:#1A1C1E;">You Can Count On.</span>
+        Home renovations in Maple Ridge <span style="color:#E86C2D;">you can count on.</span>
       </h1>
 
-      <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(255,255,255,0.8);line-height:1.65;max-width:480px;margin-left:auto;">
-        From small upgrades to full room transformations, we handle every project professionally, efficiently, and with clear communication from start to finish.
+      <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(252,248,248,0.6);line-height:1.65;max-width:480px;">
+        From small upgrades to full room transformations, we handle it professionally and efficiently.
       </p>
 
-      <div style="display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
-        <a href="#contact" class="btn btn-dark btn-lg">Get a Free Quote</a>
-        <a href="tel:+12368891644" class="btn btn-white btn-lg">Call for Coverage</a>
+      <div style="display:flex;align-items:center;justify-content:flex-start;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-copper btn-lg">Get a Free Quote</a>
+        <a href="tel:+12368891644" class="btn btn-outline-light btn-lg">Call for Coverage</a>
       </div>
 
-      <div class="eyebrow" style="color:rgba(255,255,255,0.5);margin-top:2.25rem;">
+      <div class="eyebrow" style="color:rgba(252,248,248,0.3);margin-top:2.25rem;">
         Free Estimates &nbsp;·&nbsp; Honest Pricing &nbsp;·&nbsp; Clean Job Sites
       </div>
     </div>
 
     <div class="scroll-cue">
-      <div class="eyebrow" style="color:rgba(255,255,255,0.7);font-size:8px;">Scroll</div>
+      <div class="eyebrow" style="color:rgba(255,255,255,0.35);font-size:8px;">Scroll</div>
       <svg width="18" height="28" viewBox="0 0 18 28" fill="none">
-        <rect x="6" y="0.5" width="6" height="11" rx="3" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-        <circle cx="9" cy="5" r="1.8" fill="#1A1C1E"/>
-        <path d="M4 19l5 6 5-6" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="6" y="0.5" width="6" height="11" rx="3" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+        <circle cx="9" cy="5" r="1.8" fill="#E86C2D" opacity="0.8"/>
+        <path d="M4 19l5 6 5-6" stroke="rgba(255,255,255,0.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </section>
@@ -504,7 +499,7 @@
   <!-- ═══════════════════════════════════════
        TRUST TICKER
   ═══════════════════════════════════════ -->
-  <div style="background:#3C3E40;border-bottom:1px solid rgba(0,0,0,0.18);">
+  <div style="background:#3C3E40;border-bottom:1px solid rgba(255,255,255,0.06);">
     <div class="ticker-outer" style="padding:11px 0;">
       <div class="ticker-track">
         <span class="ticker-item"><span class="ticker-dot"></span>Kitchen Renovations</span>
@@ -545,7 +540,7 @@
             Serving homeowners, landlords, and property investors in Maple Ridge and the Lower Mainland. Every project, big or small, gets the same attention to quality and detail.
           </p>
         </div>
-        <a href="#contact" class="btn btn-dark btn-lg">Get a Free Quote</a>
+        <a href="#contact" class="btn btn-copper btn-lg">Get a Free Quote</a>
       </div>
 
       <!-- Service cards: 4-column grid -->
@@ -768,7 +763,7 @@
           <p style="font-size:0.9rem;line-height:1.75;color:#595B5D;margin-bottom:2.5rem;">
             When a job requires a licensed plumber or electrician, qualified tradespeople are brought in — protecting your home's warranties and meeting all legal requirements. You always know who is doing the work.
           </p>
-          <a href="#contact" class="btn btn-dark btn-lg">Get a Free Quote</a>
+          <a href="#contact" class="btn btn-copper btn-lg">Get a Free Quote</a>
         </div>
 
         <div style="display:flex;flex-direction:column;gap:1.25rem;">
@@ -1063,7 +1058,7 @@
 
           <input type="hidden" name="_source" value="home-renovations" />
 
-          <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;font-size:0.88rem;padding:1.1rem;">
+          <button type="submit" class="btn btn-copper" style="width:100%;justify-content:center;font-size:0.88rem;padding:1.1rem;">
             Send Project Inquiry
           </button>
           <div class="form-success" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1rem;text-align:center;gap:1.25rem;">
@@ -1090,7 +1085,7 @@
         <div>
           <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:148px;width:auto;margin-bottom:1.25rem;" />
           <p style="font-size:0.82rem;line-height:1.75;color:rgba(252,248,248,0.38);margin-bottom:1.75rem;max-width:280px;">
-            Strata maintenance, home renovations, and safety support for Maple Ridge and the Lower Mainland.
+            Construction safety compliance, strata maintenance, and home renovations for Maple Ridge and the Lower Mainland.
           </p>
           <a href="tel:+12368891644" class="btn btn-copper" style="font-size:0.75rem;padding:0.65rem 1.25rem;">Call Now</a>
         </div>
@@ -1098,7 +1093,7 @@
         <div>
           <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
           <nav style="display:flex;flex-direction:column;gap:0.7rem;">
-            <a href="index.html" class="foot-link">Safety Support</a>
+            <a href="construction-safety.html" class="foot-link">Construction Safety</a>
             <a href="strata-maintenance.html" class="foot-link">Strata Maintenance</a>
             <a href="home-renovations.html" class="foot-link">Home Renovations</a>
           </nav>
@@ -1153,9 +1148,9 @@
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;flex-direction:column;flex:1;">
       <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:0.75rem;">Services</div>
-      <a href="index.html" class="mob-nav-sub">
+      <a href="construction-safety.html" class="mob-nav-sub">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        Safety Support
+        Construction Safety
       </a>
       <a href="strata-maintenance.html" class="mob-nav-sub">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -1217,6 +1212,17 @@
     hamburger.addEventListener('click', openMobNav);
     document.getElementById('mob-nav-close').addEventListener('click', closeMobNav);
     mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
+
+    // Services dropdown – click to toggle
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    dropdownToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', function() {
+      dropdown.classList.remove('open');
+    });
 
     function rmsFormSubmit(form) {
       const data = new FormData(form);

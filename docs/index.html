@@ -144,7 +144,7 @@
       background-size: 90px 90px;
     }
     .hero-glow {
-      position: absolute; inset: 0; z-index: 0;
+      position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 0;
       background: radial-gradient(ellipse 70% 50% at 50% 45%, rgba(232,108,45,0.09) 0%, transparent 70%);
     }
     .hero-content { position: relative; z-index: 10; max-width: 780px; padding: 0 2rem 0 4rem; text-align: left; margin-top: 10vh; }
@@ -190,8 +190,8 @@
     /* ── SERVICE CARDS ── */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 460px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 520px;
     }
     .svc-card {
       position: relative; overflow: hidden; cursor: pointer;
@@ -331,7 +331,9 @@
       letter-spacing: 0.1em; text-transform: uppercase;
       color: rgba(255,255,255,0.6); transition: color 0.2s;
     }
-    .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-toggle:hover, .nav-dropdown.open .nav-dropdown-toggle { color: #E86C2D; }
+    .nav-dropdown-toggle svg { transition: transform 0.2s ease; }
+    .nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
     .nav-dropdown-panel {
       position: absolute; top: calc(100% + 1.25rem); left: -1.25rem;
       background: rgba(13,14,15,0.97);
@@ -341,11 +343,9 @@
       min-width: 210px; backdrop-filter: blur(14px); z-index: 20;
       opacity: 0; visibility: hidden; pointer-events: none;
       transition: opacity 0.15s ease, visibility 0.15s ease;
-      transition-delay: 0.45s;
     }
-    .nav-dropdown:hover .nav-dropdown-panel {
+    .nav-dropdown.open .nav-dropdown-panel {
       opacity: 1; visibility: visible; pointer-events: auto;
-      transition-delay: 0s;
     }
     .nav-dropdown-item {
       padding: 0.6rem 1.25rem;
@@ -403,10 +403,17 @@
     .mob-nav-sub:hover, .mob-nav-sub.active { color: #E86C2D; }
 
     /* ── MOBILE ── */
+    .svc-feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
+    .svc-feature-card {
+      text-decoration: none; display: block;
+      position: relative; border-radius: 3px; overflow: hidden; min-height: 560px;
+    }
+    .svc-feature-card:hover .card-arrow { background: #E86C2D; border-color: #E86C2D; }
+
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .cards-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 380px); }
+      .cards-grid { grid-template-columns: 1fr; grid-template-rows: repeat(3, 420px); }
       .split-2 { grid-template-columns: 1fr !important; }
       .stats-4 { grid-template-columns: repeat(2, 1fr) !important; }
       .proc-4 { grid-template-columns: repeat(2, 1fr) !important; }
@@ -415,6 +422,8 @@
       .hero { align-items: center; }
       .hero-content { text-align: center; padding: 0 1.5rem; margin-top: 0; }
       .hero-logo-bg { display: none; }
+      .svc-feature-grid { grid-template-columns: 1fr; }
+      .svc-feature-card { min-height: 320px; }
     }
     @media (max-width: 600px) {
       .stats-4 { grid-template-columns: 1fr !important; }
@@ -441,9 +450,9 @@
               <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="nav-dropdown-panel">
-              <a href="index.html" class="nav-dropdown-item active">
+              <a href="construction-safety.html" class="nav-dropdown-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                Safety Support
+                Construction Safety
               </a>
               <a href="strata-maintenance.html" class="nav-dropdown-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -484,24 +493,24 @@
     <!-- Content -->
     <div class="hero-content">
       <div class="eyebrow" style="color:rgba(232,108,45,0.85);margin-bottom:1.5rem;">
-        Construction Safety Officer &amp; Advanced First Aid
+        Construction Safety &nbsp;·&nbsp; Strata Maintenance &nbsp;·&nbsp; Home Renovations
       </div>
 
       <h1 class="t1" style="color:#FCF8F8;">
-        Managing Your Risk.<br /><span style="color:#E86C2D;">Leading Your Safety.</span>
+        Your Site.<br />Your Strata.<br />Your Home.<br /><span style="color:#E86C2D;">Done Right.</span>
       </h1>
 
       <p style="margin-top:1.75rem;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:400;color:rgba(252,248,248,0.6);line-height:1.65;max-width:460px;">
-        Professional CSO oversight &amp; advanced first aid for high-stakes construction across the Lower Mainland.
+        Rocky Mountain Solutions delivers construction safety compliance, strata property care, and home renovations across the Lower Mainland — one trusted team for every job.
       </p>
 
       <div style="display:flex;align-items:center;justify-content:flex-start;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
-        <a href="tel:+12368891644" class="btn btn-copper">Call for Coverage</a>
+        <a href="tel:+12368891644" class="btn btn-copper">Call Us Today</a>
         <a href="#services"        class="btn btn-outline-light">View Services</a>
       </div>
 
       <div class="eyebrow" style="color:rgba(252,248,248,0.3);margin-top:2.25rem;">
-        WorkSafeBC Compliant &nbsp;·&nbsp; COR® Support &nbsp;·&nbsp; Maple Ridge, BC
+        WorkSafeBC Compliant &nbsp;·&nbsp; Strata &amp; Renovation Services &nbsp;·&nbsp; Maple Ridge, BC
       </div>
     </div>
 
@@ -523,23 +532,23 @@
   <div style="background:#3C3E40;border-bottom:1px solid rgba(255,255,255,0.06);">
     <div class="ticker-outer" style="padding:11px 0;">
       <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot"></span>Construction Safety Compliance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Strata Maintenance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Home Renovations</span>
         <span class="ticker-item"><span class="ticker-dot"></span>WorkSafeBC Compliant</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>COR® Support</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Advanced First Aid — OFA Level 3</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Property Care &amp; Repairs</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Maple Ridge · Tri-Cities · Fraser Valley</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Incident Response</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Site Safety Plans</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Hazard Assessment</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Interior &amp; Exterior Renovations</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified — OFA Level 3</span>
         <!-- duplicate for seamless loop -->
+        <span class="ticker-item"><span class="ticker-dot"></span>Construction Safety Compliance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Strata Maintenance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Home Renovations</span>
         <span class="ticker-item"><span class="ticker-dot"></span>WorkSafeBC Compliant</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>COR® Support</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Advanced First Aid — OFA Level 3</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Property Care &amp; Repairs</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Maple Ridge · Tri-Cities · Fraser Valley</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Incident Response</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Site Safety Plans</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Hazard Assessment</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Interior &amp; Exterior Renovations</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>CSO Certified — OFA Level 3</span>
       </div>
     </div>
   </div>
@@ -554,65 +563,70 @@
         <div>
           <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">What We Do</div>
           <h2 class="h2" style="color:#1A1C1E;max-width:520px;">
-            Complete Safety Solutions,<br />Built for the Field.
+            Managing your risk.<br />Expanding your solutions.
           </h2>
         </div>
-        <a href="#contact" class="btn btn-copper btn-lg">Request Coverage</a>
+        <a href="#contact" class="btn btn-copper btn-lg">Get a Free Quote</a>
       </div>
     </div>
 
     <!-- Full-bleed 2×2 card grid -->
     <div class="cards-grid">
 
-      <!-- 01 · Safety Compliance -->
+      <!-- 01 · Construction Safety Compliance -->
+      <a href="construction-safety.html" style="text-decoration:none;display:contents;">
       <div class="svc-card">
         <div class="svc-card-bg" style="background-image:url('assets/safety_complience_and_oversight.png');background-size:cover;background-position:center;"></div>
-        <div class="svc-card-overlay"></div>
-        <div class="svc-card-content">
-          <div class="eyebrow card-num">01</div>
-          <div>
-            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
-              Safety Compliance<br />&amp; Oversight
-            </h3>
-            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
-              Inspections, hazard assessments, site safety plans, and WorkSafeBC audit support. Proactive control before problems become incidents.
-            </p>
-            <div class="card-cta-row">
-              <div class="card-arrow">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 02 · Training — copper top bar variant -->
-      <div class="svc-card">
-        <div class="svc-card-bg" style="background-image:url('assets/training_and_engagement.png');background-size:cover;background-position:center;"></div>
         <div class="svc-card-overlay"></div>
         <!-- copper accent bar -->
         <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#E86C2D;z-index:3;"></div>
         <div class="svc-card-content">
-          <div class="eyebrow card-num">02</div>
+          <div class="eyebrow card-num">01</div>
           <div>
             <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
-              Training &amp;<br />Engagement
+              Construction Safety<br />Compliance
             </h3>
             <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
-              Site-specific orientations, toolbox talks, and safety culture development. Field-level training that sticks with your crew.
+              Embedded CSO oversight, WorkSafeBC compliance, OFA Level 3 first aid, and COR® audit support — keeping your crew safe on every shift.
             </p>
             <div class="card-cta-row">
               <div class="card-arrow">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Go to Service</span>
             </div>
           </div>
         </div>
       </div>
+      </a>
 
-      <!-- 03 · Incident Response — warm dark bg -->
+      <!-- 02 · Strata Maintenance -->
+      <a href="strata-maintenance.html" style="text-decoration:none;display:contents;">
+      <div class="svc-card">
+        <div class="svc-card-bg" style="background-image:url('assets/training_and_engagement.png');background-size:cover;background-position:center;"></div>
+        <div class="svc-card-overlay"></div>
+        <div class="svc-card-content">
+          <div class="eyebrow card-num">02</div>
+          <div>
+            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
+              Strata<br />Maintenance
+            </h3>
+            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
+              Reliable property care, preventive maintenance, and repairs for strata corporations — one team to manage it all, without the hassle.
+            </p>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Go to Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+
+      <!-- 03 · Home Renovations -->
+      <a href="home-renovations.html" style="text-decoration:none;display:contents;">
       <div class="svc-card">
         <div class="svc-card-bg" style="background-image:url('assets/incident_response_and_first_aid.png');background-size:cover;background-position:center;"></div>
         <div class="svc-card-overlay"></div>
@@ -620,43 +634,21 @@
           <div class="eyebrow card-num">03</div>
           <div>
             <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
-              Incident Response<br />&amp; First Aid
+              Home<br />Renovations
             </h3>
             <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
-              Advanced first aid, OFA Level 3 care, and EMS coordination. When it matters most — we're already on the floor.
+              Interior upgrades, exterior repairs, and full-suite renovations tailored to your home — quality craftsmanship delivered on time.
             </p>
             <div class="card-cta-row">
               <div class="card-arrow">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Go to Service</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- 04 · Documentation -->
-      <div class="svc-card">
-        <div class="svc-card-bg" style="background-image:url('assets/documentation%20%26%20reporting.png');background-size:cover;background-position:center;"></div>
-        <div class="svc-card-overlay"></div>
-        <div class="svc-card-content">
-          <div class="eyebrow card-num">04</div>
-          <div>
-            <h3 class="h3" style="color:#FCF8F8;margin-bottom:0.75rem;">
-              Documentation<br />&amp; Reporting
-            </h3>
-            <p style="font-size:0.88rem;color:rgba(252,248,248,0.88);line-height:1.65;max-width:380px;margin-bottom:0;">
-              Accident investigation, COR® compliance records, and a complete paper trail. Every inspection, every incident — documented.
-            </p>
-            <div class="card-cta-row">
-              <div class="card-arrow">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      </a>
 
     </div>
   </section>
@@ -674,16 +666,16 @@
           <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.9rem;">Why Rocky Mountain Solutions</div>
           <div class="rule" style="margin-bottom:2rem;"></div>
           <h2 class="h2" style="color:#1A1C1E;margin-bottom:2rem;">
-            Safety Is Not a<br />Requirement to Meet.<br />
-            <span style="color:#E86C2D;">It's a Responsibility<br />to Lead.</span>
+            One Company.<br />Every Service<br />
+            <span style="color:#E86C2D;">You Need.</span>
           </h2>
           <p style="font-size:1.05rem;line-height:1.75;color:#3C3E40;margin-bottom:1.5rem;">
-            Rocky Mountain Solutions provides embedded Construction Safety Officer services and OFA Level 3 first aid coverage for high-stakes job sites across the Lower Mainland. We don't sit in trailers — we work the floor.
+            Rocky Mountain Solutions is a Maple Ridge-based company serving the Lower Mainland with three core services: Construction Safety Compliance, Strata Maintenance, and Home Renovations. Whatever the job, we show up ready.
           </p>
           <p style="font-size:0.95rem;line-height:1.75;color:#595B5D;margin-bottom:2.75rem;">
-            Our approach is straightforward: know the site, know the hazards, and maintain the systems that keep workers going home safe. From WorkSafeBC compliance to COR® audit support — every day, every shift, zero compromises.
+            Whether we're keeping a job site WorkSafeBC compliant, managing ongoing strata repairs, or transforming a home — our approach never changes: do the work right, communicate clearly, and stand behind every result.
           </p>
-          <a href="tel:+12368891644" class="btn btn-copper btn-lg">Book a Site Assessment</a>
+          <a href="#contact" class="btn btn-copper btn-lg">Get a Free Quote</a>
         </div>
 
         <!-- Photo -->
@@ -702,8 +694,8 @@
       <div class="stats-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
 
         <div style="padding:2rem 2rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="stat-num" style="color:#E86C2D;">100%</div>
-          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">WorkSafeBC Compliant</div>
+          <div class="stat-num" style="color:#E86C2D;">3</div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">Core Services Offered</div>
         </div>
 
         <div style="padding:2rem;border-right:1px solid rgba(255,255,255,0.08);">
@@ -712,8 +704,8 @@
         </div>
 
         <div style="padding:2rem;border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="stat-num" style="color:#FCF8F8;">COR®</div>
-          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">Audit-Ready Support</div>
+          <div class="stat-num" style="color:#FCF8F8;">100%</div>
+          <div class="eyebrow" style="color:rgba(252,248,248,0.38);margin-top:0.75rem;">WorkSafeBC Compliant</div>
         </div>
 
         <div style="padding:2rem 0 2rem 2rem;">
@@ -735,7 +727,7 @@
       <div style="margin-bottom:4.5rem;">
         <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">How It Works</div>
         <h2 class="h2" style="color:#1A1C1E;max-width:560px;">
-          From First Call to<br />Site Coverage — Fast.
+          From First Call to<br />Work Complete — Simple.
         </h2>
       </div>
 
@@ -745,28 +737,28 @@
           <div class="proc-num">01</div>
           <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
           <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Reach Out</h3>
-          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Call or submit a coverage request. We respond fast — because your site doesn't wait.</p>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Call or send a request. Tell us what you need — safety coverage, property maintenance, or a renovation — and we'll get back to you fast.</p>
         </div>
 
         <div style="position:relative;padding-top:4.5rem;">
           <div class="proc-num">02</div>
           <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
-          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Site Assessment</h3>
-          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">We review your scope, hazard profile, and WorkSafeBC requirements to plan the right coverage.</p>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Free Consultation</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">We review your project scope, requirements, and timeline to put together the right plan for your job.</p>
         </div>
 
         <div style="position:relative;padding-top:4.5rem;">
           <div class="proc-num">03</div>
           <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
-          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Deployed On-Site</h3>
-          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Your CSO and first aid coverage is in place — working the site, not sitting in an office.</p>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">We Get to Work</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Our team shows up prepared and professional — on your job site, in your strata, or in your home.</p>
         </div>
 
         <div style="position:relative;padding-top:4.5rem;">
           <div class="proc-num">04</div>
           <div style="width:6px;height:6px;background:#E86C2D;border-radius:50%;margin-bottom:1.25rem;position:relative;z-index:1;"></div>
-          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Documented &amp; Reported</h3>
-          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Full records for every inspection, incident, and audit. Your paper trail is always current.</p>
+          <h3 style="font-family:'Sherika','Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:900;color:#1A1C1E;margin-bottom:0.65rem;line-height:1.2;">Job Done Right</h3>
+          <p style="font-size:0.875rem;line-height:1.7;color:#595B5D;">Every project is completed to standard and backed by our commitment to quality — no shortcuts, no excuses.</p>
         </div>
 
       </div>
@@ -892,17 +884,84 @@
 
 
   <!-- ═══════════════════════════════════════
+       SERVICES FEATURE — Strata & Renos
+  ═══════════════════════════════════════ -->
+  <section style="background:#0D0E0F;padding:6rem 0;">
+    <div class="wrap">
+      <div style="margin-bottom:3.5rem;">
+        <h2 class="h2" style="color:#FCF8F8;line-height:1.2;">
+          Which Service<br />
+          <span style="color:#E86C2D;">Is Right for You?</span>
+        </h2>
+      </div>
+
+      <div class="svc-feature-grid">
+
+        <!-- Construction Safety Compliance -->
+        <a href="construction-safety.html" class="svc-feature-card">
+          <div style="position:absolute;inset:0;background-image:url('assets/RMS-mountain.png');background-size:300% 100%;background-position:0% 12%;background-repeat:no-repeat;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,15,0.97) 0%,rgba(13,14,15,0.65) 45%,rgba(13,14,15,0.25) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem 2.25rem;">
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:700;color:#FCF8F8;margin-bottom:0.45rem;letter-spacing:0.01em;">Construction Safety Compliance</div>
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:0.875rem;color:rgba(252,248,248,0.55);line-height:1.5;">CSO oversight, first aid, and WorkSafeBC support.</div>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Strata Maintenance -->
+        <a href="strata-maintenance.html" class="svc-feature-card">
+          <div style="position:absolute;inset:0;background-image:url('assets/RMS-mountain.png');background-size:300% 100%;background-position:50% 12%;background-repeat:no-repeat;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,15,0.97) 0%,rgba(13,14,15,0.65) 45%,rgba(13,14,15,0.25) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem 2.25rem;">
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:700;color:#FCF8F8;margin-bottom:0.45rem;letter-spacing:0.01em;">Strata Maintenance</div>
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:0.875rem;color:rgba(252,248,248,0.55);line-height:1.5;">Ongoing property care and repairs.</div>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Home Renovations -->
+        <a href="home-renovations.html" class="svc-feature-card">
+          <div style="position:absolute;inset:0;background-image:url('assets/RMS-mountain.png');background-size:300% 100%;background-position:100% 12%;background-repeat:no-repeat;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,15,0.97) 0%,rgba(13,14,15,0.65) 45%,rgba(13,14,15,0.25) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem 2.25rem;">
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:1.15rem;font-weight:700;color:#FCF8F8;margin-bottom:0.45rem;letter-spacing:0.01em;">Home Renovations</div>
+            <div style="font-family:'Public Sans',system-ui,sans-serif;font-size:0.875rem;color:rgba(252,248,248,0.55);line-height:1.5;">Upgrade, repair, and transform spaces.</div>
+            <div class="card-cta-row">
+              <div class="card-arrow">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.85);">Learn More</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
        CTA BAND — Copper
   ═══════════════════════════════════════ -->
   <section style="background:#E86C2D;padding:6rem 2.15rem;text-align:center;">
     <div style="max-width:680px;margin:0 auto;">
-      <div class="eyebrow" style="color:rgba(26,28,30,0.55);margin-bottom:1rem;">Every Site. Every Shift.</div>
-      <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.5rem;">Zero Compromises.</h2>
+      <div class="eyebrow" style="color:rgba(26,28,30,0.55);margin-bottom:1rem;">Ready to Get Started?</div>
+      <h2 class="h2" style="color:#1A1C1E;margin-bottom:1.5rem;">Which Service Is Right for You?</h2>
       <p style="font-size:1.05rem;line-height:1.65;color:rgba(26,28,30,0.7);margin-bottom:2.75rem;">
-        Ready to put a certified CSO and first aid professional on your site? Let's talk coverage.
+        Whether you need construction safety coverage, strata property care, or a home renovation — Rocky Mountain Solutions has you covered. Reach out and let's talk.
       </p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="tel:+12368891644" class="btn btn-dark btn-lg">Call Now</a>
+        <a href="tel:+12368891644" class="btn btn-dark btn-lg">Call Us Today</a>
         <a href="#contact" class="btn btn-outline-dark btn-lg">Send a Request</a>
       </div>
     </div>
@@ -918,12 +977,12 @@
 
         <!-- Info -->
         <div>
-          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Coverage Requests</div>
+          <div class="eyebrow" style="color:#E86C2D;margin-bottom:0.75rem;">Get in Touch</div>
           <h2 class="h2" style="color:#FCF8F8;margin-bottom:2rem;">
-            Need a CSO<br />on Your Site?
+            Let's Talk<br />About Your Project.
           </h2>
           <p style="font-size:0.975rem;line-height:1.75;color:rgba(252,248,248,0.55);margin-bottom:3rem;max-width:360px;">
-            One shift or an ongoing contract — reach out and we'll scope the right coverage for your project.
+            Safety compliance, strata care, or a home reno — tell us what you need and we'll put together the right plan.
           </p>
 
           <!-- Contact rows -->
@@ -1001,11 +1060,9 @@
             <label class="field-label">Service Needed</label>
             <select name="service" required class="field-input">
               <option value="" disabled selected>Select a service</option>
-              <option>Safety Compliance &amp; Oversight</option>
-              <option>Training &amp; Engagement</option>
-              <option>Incident Response &amp; First Aid</option>
-              <option>Documentation &amp; Reporting</option>
-              <option>Full CSO Coverage</option>
+              <option>Construction Safety Compliance</option>
+              <option>Strata Maintenance</option>
+              <option>Home Renovations</option>
               <option>Other / Not Sure</option>
             </select>
           </div>
@@ -1049,7 +1106,7 @@
         <div>
           <img src="assets/logo-rms356.png" alt="Rocky Mountain Solutions" style="height:148px;width:auto;margin-bottom:1.25rem;" />
           <p style="font-size:0.82rem;line-height:1.75;color:rgba(252,248,248,0.38);margin-bottom:1.75rem;max-width:280px;">
-            Professional CSO oversight and advanced first aid for high-stakes construction. WorkSafeBC compliant. Serving the Lower Mainland.
+            Construction safety compliance, strata maintenance, and home renovations for Maple Ridge and the Lower Mainland.
           </p>
           <a href="tel:+12368891644" class="btn btn-copper" style="font-size:0.75rem;padding:0.65rem 1.25rem;">Call Now</a>
         </div>
@@ -1058,7 +1115,7 @@
         <div>
           <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:1.25rem;font-size:8px;">Services</div>
           <nav style="display:flex;flex-direction:column;gap:0.7rem;">
-            <a href="index.html" class="foot-link">Safety Support</a>
+            <a href="construction-safety.html" class="foot-link">Construction Safety</a>
             <a href="strata-maintenance.html" class="foot-link">Strata Maintenance</a>
             <a href="home-renovations.html" class="foot-link">Home Renovations</a>
           </nav>
@@ -1116,9 +1173,9 @@
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;flex-direction:column;flex:1;">
       <div class="eyebrow" style="color:rgba(252,248,248,0.28);margin-bottom:0.75rem;">Services</div>
-      <a href="index.html" class="mob-nav-sub active">
+      <a href="construction-safety.html" class="mob-nav-sub">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        Safety Support
+        Construction Safety
       </a>
       <a href="strata-maintenance.html" class="mob-nav-sub">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -1207,6 +1264,17 @@
     hamburger.addEventListener('click', openMobNav);
     document.getElementById('mob-nav-close').addEventListener('click', closeMobNav);
     mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
+
+    // Services dropdown – click to toggle
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    dropdownToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', function() {
+      dropdown.classList.remove('open');
+    });
 
     // Form submission — sends to rockymsolutions@gmail.com via Formspree
     function rmsFormSubmit(form) {
